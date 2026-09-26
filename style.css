@@ -6,7 +6,6 @@
     --page-width: 1200px;
 
     --side-padding: 48px;
-    --section-gap: 64px;
     --column-gap: 48px;
 
     --label-width: 190px;
@@ -69,7 +68,7 @@ body {
 
 
 /* ========================================
-   MAIN PAGE GRID
+   MAIN PAGE
 ======================================== */
 
 .container {
@@ -90,15 +89,27 @@ body {
     padding: 48px 0;
 }
 
+
+/*
+   All profile rows use exactly the same grid:
+
+   190px          90px             remaining
+   LABEL           LOGO              TEXT
+*/
+
 .profile-row {
     display: grid;
 
-    grid-template-columns: 190px 90px 1fr;
+    grid-template-columns:
+        var(--label-width)
+        var(--logo-width)
+        minmax(0, 1fr);
+
     column-gap: 40px;
 
     align-items: start;
 
-    margin-bottom: 48px;
+    margin: 0 0 48px 0;
 }
 
 
@@ -115,8 +126,8 @@ body {
     align-items: center;
     justify-content: center;
 
-    background: #555555;
-    color: white;
+    background: var(--dark);
+    color: #ffffff;
 
     border-radius: 8px;
 
@@ -155,7 +166,7 @@ body {
 }
 
 
-/* TEXT */
+/* PROFILE TEXT */
 
 .section-content {
     margin: 0;
@@ -178,6 +189,7 @@ body {
     line-height: 1.25;
 }
 
+
 /* ========================================
    PROJECT SECTION
 ======================================== */
@@ -195,7 +207,9 @@ body {
 }
 
 
-/* EXACTLY THREE EQUAL COLUMNS */
+/* ========================================
+   THREE EXACTLY EQUAL COLUMNS
+======================================== */
 
 .projects-grid {
     display: grid;
@@ -209,9 +223,13 @@ body {
 }
 
 
-/* PROJECT COLUMN */
+/* ========================================
+   EACH PROJECT COLUMN
+======================================== */
 
 .project-column {
+    width: 100%;
+
     display: grid;
 
     grid-template-rows:
@@ -219,21 +237,29 @@ body {
         60px
         auto;
 
-    justify-items: center;
+    justify-items: stretch;
 
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 
-/* NUMBER BOX */
+/* ========================================
+   NUMBER BOX
+======================================== */
 
 .project-count {
     width: 190px;
     height: 100px;
 
+    justify-self: center;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin: 0;
+    padding: 0;
 
     background: var(--dark);
     color: var(--orange);
@@ -246,44 +272,172 @@ body {
 }
 
 
-/* COLUMN TITLE */
+/* ========================================
+   CATEGORY TITLE
+======================================== */
 
-.project-column > h3 {
-    margin: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.project-category {
+    width: 100%;
     height: 60px;
 
-    font-size: 25px;
-}
-
-
-/* PROJECT LIST */
-
-.project-list {
-    width: 100%;
-
-    border-top: 4px solid var(--dark);
-
-    padding-top: 20px;
-}
-
-.project-list p {
-    min-height: 54px;
-
     margin: 0;
-    padding: 12px 8px;
-
-    border-bottom: 1px solid #dddddd;
-
-    font-size: 16px;
+    padding: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   PROJECT TREE
+
+   IMPORTANT:
+
+   64px = icon column
+   82px = branch column
+   rest = text column
+
+======================================== */
+
+.project-tree {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 10px 0;
+
+    justify-self: stretch;
+}
+
+
+/* ========================================
+   MAIN VERTICAL LINE
+======================================== */
+
+.project-tree::before {
+    content: "";
+
+    position: absolute;
+
+    /*
+       Icon column = 64px
+       Vertical line starts immediately
+       after icon column.
+    */
+
+    left: 64px;
+
+    top: 0;
+    bottom: 0;
+
+    width: 5px;
+
+    background: var(--dark);
+
+    border-radius: 3px;
+
+    z-index: 1;
+}
+
+
+/* ========================================
+   EACH PROJECT ROW
+======================================== */
+
+.tree-item {
+    position: relative;
+
+    width: 100%;
+
+    display: grid;
+
+    /*
+       EXACT SAME X COORDINATES
+       FOR EVERY PROJECT
+    */
+
+    grid-template-columns:
+        64px
+        82px
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    min-height: 118px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.tree-icon {
+    width: 64px;
+    height: 64px;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+    line-height: 1;
+
+    color: var(--dark);
+
+    justify-self: center;
+}
+
+
+/* ========================================
+   HORIZONTAL BRANCH
+======================================== */
+
+.tree-line {
+    position: relative;
+
+    width: 82px;
+    height: 5px;
+
+    margin: 0;
+    padding: 0;
+
+    background: var(--dark);
+
+    border-radius: 0 4px 4px 0;
+
+    z-index: 2;
+}
+
+
+/* ========================================
+   PROJECT TEXT
+======================================== */
+
+.tree-text {
+    margin: 0;
+    padding: 0 0 0 16px;
+
+    text-align: left;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    color: var(--dark);
 }
 
 
@@ -309,5 +463,10 @@ body {
     .projects-grid {
         grid-template-columns: 1fr;
         row-gap: 60px;
+    }
+
+    .project-column {
+        max-width: 420px;
+        margin: 0 auto;
     }
 }
