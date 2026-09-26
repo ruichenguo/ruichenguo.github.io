@@ -1,0 +1,295 @@
+/* ========================================
+   GLOBAL DESIGN SYSTEM
+======================================== */
+
+:root {
+    --page-width: 1200px;
+
+    --side-padding: 48px;
+    --section-gap: 64px;
+    --column-gap: 48px;
+
+    --label-width: 190px;
+    --logo-width: 90px;
+
+    --dark: #555555;
+    --orange: #ff6600;
+    --text: #444444;
+    --background: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.hero {
+    width: 100%;
+    background: #dddddd;
+
+    padding: 40px var(--side-padding);
+}
+
+.hero-text {
+    width: min(100%, var(--page-width));
+    margin: 0 auto;
+}
+
+.hero h1 {
+    margin: 0 0 8px;
+    font-size: 38px;
+}
+
+.hero h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+    font-style: italic;
+}
+
+.hero p {
+    margin: 0;
+    font-size: 18px;
+}
+
+
+/* ========================================
+   MAIN PAGE GRID
+======================================== */
+
+.container {
+    width: min(
+        calc(100% - (var(--side-padding) * 2)),
+        var(--page-width)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   PROFILE
+======================================== */
+
+.profile {
+    padding: 48px 0;
+}
+
+.profile-row {
+    display: grid;
+
+    grid-template-columns:
+        var(--label-width)
+        var(--logo-width)
+        1fr;
+
+    column-gap: 32px;
+
+    align-items: start;
+
+    margin-bottom: 36px;
+}
+
+
+/* LEFT LABEL */
+
+.section-label {
+    width: 100%;
+
+    padding: 12px 16px;
+
+    background: var(--dark);
+    color: white;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* LOGO PLACEHOLDER */
+
+.section-logo {
+    width: 70px;
+    height: 70px;
+
+    justify-self: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eeeeee;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* PROFILE TEXT */
+
+.section-content h3 {
+    margin: 0 0 6px;
+
+    font-size: 21px;
+}
+
+.section-content p {
+    margin: 4px 0;
+
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   PROJECT SECTION
+======================================== */
+
+.projects {
+    padding: 24px 0 80px;
+}
+
+.projects-heading {
+    margin: 0 0 40px;
+
+    text-align: center;
+
+    font-size: 30px;
+}
+
+
+/* EXACTLY THREE EQUAL COLUMNS */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    column-gap: var(--column-gap);
+
+    align-items: start;
+}
+
+
+/* PROJECT COLUMN */
+
+.project-column {
+    display: grid;
+
+    grid-template-rows:
+        110px
+        60px
+        auto;
+
+    justify-items: center;
+
+    text-align: center;
+}
+
+
+/* NUMBER BOX */
+
+.project-count {
+    width: 190px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--dark);
+    color: var(--orange);
+
+    border-radius: 16px;
+
+    font-size: 68px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* COLUMN TITLE */
+
+.project-column > h3 {
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 60px;
+
+    font-size: 25px;
+}
+
+
+/* PROJECT LIST */
+
+.project-list {
+    width: 100%;
+
+    border-top: 4px solid var(--dark);
+
+    padding-top: 20px;
+}
+
+.project-list p {
+    min-height: 54px;
+
+    margin: 0;
+    padding: 12px 8px;
+
+    border-bottom: 1px solid #dddddd;
+
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+
+    :root {
+        --side-padding: 20px;
+    }
+
+    .profile-row {
+        grid-template-columns: 1fr;
+        row-gap: 18px;
+    }
+
+    .section-logo {
+        justify-self: start;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        row-gap: 60px;
+    }
+}
