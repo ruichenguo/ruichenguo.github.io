@@ -46,7 +46,6 @@ body {
 
 .hero {
     width: 100%;
-
     background: #dddddd;
 
     padding: 40px var(--side-padding);
@@ -54,26 +53,22 @@ body {
 
 .hero-text {
     width: min(100%, var(--page-width));
-
     margin: 0 auto;
 }
 
 .hero h1 {
     margin: 0 0 8px;
-
     font-size: 38px;
 }
 
 .hero h2 {
     margin: 0 0 8px;
-
     font-size: 26px;
     font-style: italic;
 }
 
 .hero p {
     margin: 0;
-
     font-size: 18px;
 }
 
@@ -124,11 +119,7 @@ body {
     width: 190px;
     height: 62px;
 
-    margin: 0;
-    padding: 0;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -150,11 +141,7 @@ body {
     width: 90px;
     height: 90px;
 
-    margin: 0;
-    padding: 0;
-
     display: flex;
-
     align-items: flex-start;
     justify-content: center;
 
@@ -166,9 +153,6 @@ body {
 
     width: 90px;
     height: 90px;
-
-    margin: 0;
-    padding: 0;
 
     object-fit: contain;
     object-position: center top;
@@ -185,7 +169,7 @@ body {
 }
 
 .section-content h3 {
-    margin: 0 0 6px 0;
+    margin: 0 0 6px;
     padding: 0;
 
     font-size: 21px;
@@ -193,7 +177,7 @@ body {
 }
 
 .section-content p {
-    margin: 6px 0 0 0;
+    margin: 6px 0 0;
     padding: 0;
 
     font-size: 17px;
@@ -213,7 +197,6 @@ body {
     margin: 0 0 40px;
 
     text-align: center;
-
     font-size: 30px;
 }
 
@@ -257,7 +240,6 @@ body {
     height: 100px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -349,7 +331,7 @@ body {
 
 
 /* ========================================
-   HORIZONTAL BRANCH
+   HORIZONTAL TREE LINE
 ======================================== */
 
 .tree-line {
@@ -419,26 +401,29 @@ body {
 
 
 /* ========================================
-   PROJECT 01 — THREE ICONS
+   PROJECT 01
+   THREE ICON GRID
 
               ROAD
-             95×95
-                |
-              15px
-                |
-       CCTV ←6px→ CONDUIT
-       95×95      95×95
+             95 × 95
 
-   TOTAL WIDTH:
-   95 + 6 + 95 = 196px
+               15px
 
-   TOTAL HEIGHT:
-   95 + 15 + 95 = 205px
+       CCTV ← 6px → CONDUIT
+      95 × 95       95 × 95
 ======================================== */
 
 .tree-icons.three-icons {
+    /*
+       WIDTH:
+       95 + 6 + 95 = 196px
+
+       HEIGHT:
+       95 + 15 + 95 = 205px
+    */
+
     width: 196px;
-    height: auto;
+    height: 205px;
 
     display: grid;
 
@@ -448,13 +433,11 @@ body {
     grid-template-rows:
         95px 95px;
 
-    /* SECOND ROW LEFT / RIGHT GAP */
+    /* LEFT / RIGHT ICON GAP */
     column-gap: 6px;
 
-    /* FIRST / SECOND ROW GAP */
+    /* TOP / BOTTOM ROW GAP */
     row-gap: 15px;
-
-    position: relative;
 
     justify-self: start;
     align-self: center;
@@ -462,7 +445,8 @@ body {
 
 
 /* ========================================
-   ROAD — FIRST ROW CENTER
+   ROAD
+   FIRST ROW — CENTERED
 ======================================== */
 
 .three-icons .icon-road {
@@ -478,6 +462,7 @@ body {
     align-self: center;
 
     margin: 0;
+    padding: 0;
 
     transform: none;
 
@@ -486,7 +471,8 @@ body {
 
 
 /* ========================================
-   CCTV — SECOND ROW LEFT
+   CCTV
+   SECOND ROW — LEFT
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -502,6 +488,7 @@ body {
     align-self: center;
 
     margin: 0;
+    padding: 0;
 
     transform: none;
 
@@ -510,7 +497,8 @@ body {
 
 
 /* ========================================
-   CONDUIT — SECOND ROW RIGHT
+   CONDUIT
+   SECOND ROW — RIGHT
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -526,6 +514,7 @@ body {
     align-self: center;
 
     margin: 0;
+    padding: 0;
 
     transform: none;
 
@@ -583,7 +572,7 @@ body {
 
 .tree-icons.four-icons {
     width: 196px;
-    height: auto;
+    height: 205px;
 
     display: grid;
 
@@ -637,7 +626,6 @@ body {
 
     .project-column {
         width: 100%;
-
         max-width: 600px;
 
         margin: 0 auto;
@@ -652,10 +640,11 @@ body {
     }
 
 
-    /* PROJECT 01 THREE ICONS */
+    /* THREE ICONS */
 
     .tree-icons.three-icons {
         width: 196px;
+        height: 205px;
 
         grid-template-columns:
             95px 95px;
@@ -663,27 +652,16 @@ body {
         grid-template-rows:
             95px 95px;
 
-        /* LEFT / RIGHT */
         column-gap: 6px;
-
-        /* TOP / BOTTOM */
         row-gap: 15px;
     }
 
 
-    /* KEEP ICON SIZE */
+    /* ICON SIZE */
 
     .tree-icons img {
         width: 95px;
         height: 95px;
     }
 
-}
-.tree-icons.three-icons {
-    row-gap: 60px !important;
-    column-gap: 40px !important;
-}
-
-.three-icons .icon-road {
-    outline: 5px solid red !important;
 }
