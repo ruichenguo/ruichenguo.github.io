@@ -713,3 +713,26 @@ body {
     }
 
 }
+/* ========================================
+   DEBUG — SHOW ICON BOUNDARIES
+======================================== */
+
+/* Road：绿色边框 */
+.three-icons .icon-road {
+    outline: 2px solid green !important;
+}
+
+/* CCTV：蓝色边框 */
+.three-icons .icon-cctv {
+    outline: 2px solid blue !important;
+}
+
+/* Conduit：红色边框 */
+.three-icons .icon-conduit {
+    outline: 2px solid red !important;
+}
+
+/* 整个三图标区域：紫色边框 */
+.tree-icons.three-icons {
+    outline: 2px dashed purple !important;
+}
