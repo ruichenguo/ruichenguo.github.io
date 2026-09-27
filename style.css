@@ -419,15 +419,15 @@ body {
 
                 ROAD
                   │
+                14px
                   │
-                  │
-        CCTV           CONDUIT
+        CCTV   14px   CONDUIT
 
    第一行中心线 =
-   第二行总长度中心线
+   第二行整体总宽度中心线
 
-   Vertical gaps ≈ 12px
-   Horizontal gap = 12px
+   上下间距 ≈ 14px
+   左右间距 = 14px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -444,18 +444,19 @@ body {
 /* ========================================
    ROAD
 
-   Width = 95px
+   width = 95px
 
-   Second row total:
-   left edge  = 5.5px
-   right edge ≈ 172.5px
+   第二行：
+   CCTV left = 5.5px
+   CCTV width = 95px
+   gap = 14px
+   Conduit left = 114.5px
+   Conduit width ≈ 60px
 
-   second-row center ≈ 89px
+   第二行整体中心 ≈ 90px
 
    Road left:
-   89 - 47.5 = 41.5px
-
-   Therefore Road center ≈ 89px
+   90 - 47.5 = 42.5px
 ======================================== */
 
 .three-icons .icon-road {
@@ -466,7 +467,7 @@ body {
 
     max-width: none;
 
-    left: 41.5px;
+    left: 42.5px;
     top: 0;
 
     margin: 0;
@@ -481,12 +482,11 @@ body {
 /* ========================================
    CCTV
 
-   Width = 95px
+   Road → CCTV ≈ 14px
 
-   left edge  = 5.5px
+   left = 5.5px
+   width = 95px
    right edge = 100.5px
-
-   Road → CCTV ≈ 12px
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -498,7 +498,7 @@ body {
     max-width: none;
 
     left: 5.5px;
-    top: 70.8px;
+    top: 72.8px;
 
     margin: 0;
     padding: 0;
@@ -512,17 +512,12 @@ body {
 /* ========================================
    CONDUIT
 
-   Height = 95px
-   rendered width ≈ 60px
-
-   left edge ≈ 112.5px
+   Road → Conduit ≈ 14px
 
    CCTV right edge = 100.5px
+   Conduit left = 114.5px
 
-   Horizontal gap:
-   112.5 - 100.5 = 12px
-
-   Road → Conduit ≈ 12px
+   114.5 - 100.5 = 14px
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -533,8 +528,8 @@ body {
 
     max-width: none;
 
-    left: 112.5px;
-    top: 70.8px;
+    left: 114.5px;
+    top: 72.8px;
 
     margin: 0;
     padding: 0;
@@ -573,7 +568,7 @@ body {
 ======================================== */
 
 .tree-icons.two-icons {
-    width: 202px;
+    width: 204px;
     min-height: 95px;
 
     display: flex;
@@ -581,7 +576,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 12px;
+    gap: 14px;
 }
 
 .tree-icons.two-icons img {
@@ -598,7 +593,7 @@ body {
 ======================================== */
 
 .tree-icons.four-icons {
-    width: 202px;
+    width: 204px;
 
     display: grid;
 
@@ -608,8 +603,8 @@ body {
     grid-template-rows:
         95px 95px;
 
-    column-gap: 12px;
-    row-gap: 12px;
+    column-gap: 14px;
+    row-gap: 14px;
 }
 
 .tree-icons.four-icons img {
@@ -686,7 +681,7 @@ body {
         width: 95px;
         height: auto;
 
-        left: 41.5px;
+        left: 42.5px;
         top: 0;
     }
 
@@ -698,7 +693,7 @@ body {
         height: auto;
 
         left: 5.5px;
-        top: 70.8px;
+        top: 72.8px;
     }
 
 
@@ -708,31 +703,34 @@ body {
         width: auto;
         height: 95px;
 
-        left: 112.5px;
-        top: 70.8px;
+        left: 114.5px;
+        top: 72.8px;
     }
 
 }
+
+
 /* ========================================
    DEBUG — SHOW ICON BOUNDARIES
+   验证完成后可以删除这一整段
 ======================================== */
 
-/* Road：绿色边框 */
+/* Road：绿色 */
 .three-icons .icon-road {
     outline: 2px solid green !important;
 }
 
-/* CCTV：蓝色边框 */
+/* CCTV：蓝色 */
 .three-icons .icon-cctv {
     outline: 2px solid blue !important;
 }
 
-/* Conduit：红色边框 */
+/* Conduit：红色 */
 .three-icons .icon-conduit {
     outline: 2px solid red !important;
 }
 
-/* 整个三图标区域：紫色边框 */
+/* 整个三图标区域：紫色虚线 */
 .tree-icons.three-icons {
     outline: 2px dashed purple !important;
 }
