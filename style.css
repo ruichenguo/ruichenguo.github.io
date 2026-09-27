@@ -417,19 +417,16 @@ body {
 /* ========================================
    PROJECT 01 — THREE ICONS
 
-                    ROAD
-                     │
-                     │
-          CCTV       │      CONDUIT
+                ROAD
 
-   Road stays fixed.
+       CCTV  ← 10px →  CONDUIT
 
-   CCTV + Conduit are shifted left
-   together compared with the previous
-   version.
+   Road position remains unchanged.
 
-   Horizontal gap between CCTV and
-   Conduit remains exactly 9px.
+   CCTV remains at left: 7px.
+
+   Conduit moves 1px to the right
+   compared with the previous 9px version.
 ======================================== */
 
 .tree-icons.three-icons {
@@ -445,13 +442,6 @@ body {
 
 /* ========================================
    ROAD
-
-   width = 95px
-   left = 50.5px
-
-   Road center:
-   50.5 + 47.5
-   = 98px
 ======================================== */
 
 .three-icons .icon-road {
@@ -477,14 +467,11 @@ body {
 /* ========================================
    CCTV
 
+   left = 7px
    width = 95px
 
-   NEW LEFT:
-   7px
-
    right edge:
-   7 + 95
-   = 102px
+   7 + 95 = 102px
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -510,20 +497,12 @@ body {
 /* ========================================
    CONDUIT
 
-   CCTV right edge:
-   7 + 95 = 102px
+   CCTV right edge = 102px
 
-   gap:
-   9px
+   Desired gap = 10px
 
    Conduit left:
-   102 + 9
-   = 111px
-
-   Therefore:
-
-   111 - (7 + 95)
-   = 9px
+   102 + 10 = 112px
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -534,7 +513,7 @@ body {
 
     max-width: none;
 
-    left: 111px;
+    left: 112px;
     top: 68px;
 
     margin: 0;
@@ -574,7 +553,7 @@ body {
 ======================================== */
 
 .tree-icons.two-icons {
-    width: 199px;
+    width: 200px;
     min-height: 95px;
 
     display: flex;
@@ -582,7 +561,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 9px;
+    gap: 10px;
 }
 
 .tree-icons.two-icons img {
@@ -599,7 +578,7 @@ body {
 ======================================== */
 
 .tree-icons.four-icons {
-    width: 199px;
+    width: 200px;
 
     display: grid;
 
@@ -609,7 +588,7 @@ body {
     grid-template-rows:
         95px 95px;
 
-    column-gap: 9px;
+    column-gap: 10px;
     row-gap: 9px;
 }
 
@@ -703,13 +682,13 @@ body {
     }
 
 
-    /* CONDUIT */
+    /* CONDUIT — 10px GAP */
 
     .three-icons .icon-conduit {
         width: auto;
         height: 95px;
 
-        left: 111px;
+        left: 112px;
         top: 68px;
     }
 
