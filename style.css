@@ -418,14 +418,13 @@ body {
    PROJECT 01 — THREE ICONS
 
                    ROAD
-                    ↓
-                  ~10px
-                    ↓
-          CCTV             CONDUIT
-                ← 12px →
 
-   Road → CCTV    ≈ 10px
-   Road → Conduit ≈ 10px
+                  ~12px
+
+          CCTV             CONDUIT
+
+   Road → CCTV    ≈ 12px
+   Road → Conduit ≈ 12px
    CCTV ↔ Conduit = 12px
 ======================================== */
 
@@ -471,9 +470,9 @@ body {
    CCTV
 
    Road bottom ≈ 58.8px
-   CCTV top = 68.8px
+   CCTV top = 70.8px
 
-   vertical gap ≈ 10px
+   vertical gap ≈ 12px
 
    left = 5.5px
    width = 95px
@@ -489,7 +488,7 @@ body {
     max-width: none;
 
     left: 5.5px;
-    top: 68.8px;
+    top: 70.8px;
 
     margin: 0;
     padding: 0;
@@ -504,9 +503,9 @@ body {
    CONDUIT
 
    Road bottom ≈ 58.8px
-   Conduit top = 68.8px
+   Conduit top = 70.8px
 
-   vertical gap ≈ 10px
+   vertical gap ≈ 12px
 
    left = 112.5px
 
@@ -523,7 +522,7 @@ body {
     max-width: none;
 
     left: 112.5px;
-    top: 68.8px;
+    top: 70.8px;
 
     margin: 0;
     padding: 0;
@@ -598,7 +597,7 @@ body {
         95px 95px;
 
     column-gap: 12px;
-    row-gap: 9px;
+    row-gap: 12px;
 }
 
 .tree-icons.four-icons img {
@@ -687,7 +686,7 @@ body {
         height: auto;
 
         left: 5.5px;
-        top: 68.8px;
+        top: 70.8px;
     }
 
 
@@ -698,7 +697,7 @@ body {
         height: 95px;
 
         left: 112.5px;
-        top: 68.8px;
+        top: 70.8px;
     }
 
 }
