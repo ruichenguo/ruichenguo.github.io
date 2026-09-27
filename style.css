@@ -427,12 +427,13 @@ body {
                 │
              CONDUIT
 
-   使用 FLEX 自动排列
+   三个图标竖直排列
+   三个中心线完全对齐
 
-   Road → CCTV = 12px
-   CCTV → Conduit = 12px
+   整组向右移动 24.5px
 
-   三个图标中心线完全一致
+   Road / CCTV 右边缘
+   到竖线约 45px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -447,6 +448,8 @@ body {
     gap: 12px;
 
     position: relative;
+
+    left: 24.5px;
 
     justify-self: start;
     align-self: center;
@@ -480,7 +483,7 @@ body {
 
     flex: 0 0 auto;
 
-    /* DEBUG：Road 边框 */
+    /* DEBUG：Road */
     outline: 2px solid green !important;
 }
 
@@ -506,7 +509,7 @@ body {
 
     flex: 0 0 auto;
 
-    /* DEBUG：CCTV 边框 */
+    /* DEBUG：CCTV */
     outline: 2px solid blue !important;
 }
 
@@ -532,7 +535,7 @@ body {
 
     flex: 0 0 auto;
 
-    /* DEBUG：Conduit 边框 */
+    /* DEBUG：Conduit */
     outline: 2px solid red !important;
 }
 
@@ -687,6 +690,8 @@ body {
         gap: 12px;
 
         position: relative;
+
+        left: 24.5px;
 
         margin: 0;
         padding: 0;
