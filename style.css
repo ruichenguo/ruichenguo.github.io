@@ -427,11 +427,10 @@ body {
                 │
              CONDUIT
 
-   三个图标竖直排列
    三个图标中心线完全对齐
 
    Road / CCTV 右边缘
-   到右侧竖线约 10px
+   到右侧竖线约 15px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -447,8 +446,8 @@ body {
 
     position: relative;
 
-    /* 整个图标组向右移动 */
-    left: 59.5px;
+    /* Road / CCTV → 竖线约 15px */
+    left: 54.5px;
 
     justify-self: start;
     align-self: center;
@@ -678,7 +677,8 @@ body {
 
         position: relative;
 
-        left: 59.5px;
+        /* Road / CCTV → 竖线约 15px */
+        left: 54.5px;
 
         margin: 0;
         padding: 0;
