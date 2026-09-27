@@ -290,11 +290,6 @@ body {
 
 /* ========================================
    PROJECT TREE
-
-   ICON SIZE = 95px
-   ICON GAP  = 8px
-
-   95 + 8 + 95 = 198px
 ======================================== */
 
 .project-tree {
@@ -410,6 +405,8 @@ body {
 
 /* ========================================
    ALL PROJECT ICONS
+
+   ICON SIZE = 95 × 95
 ======================================== */
 
 .tree-icons img {
@@ -427,26 +424,25 @@ body {
 
 
 /* ========================================
-   THREE ICON LAYOUT
+   PROJECT 01
+   THREE ICON VISUAL LAYOUT
 
-              ROAD
-             95 × 95
+             ROAD
 
-                8px
+       CCTV       CONDUIT
 
-       CCTV  ← 8px →  CONDUIT
-      95 × 95          95 × 95
-
-
-   TOTAL WIDTH  = 198px
-   TOTAL HEIGHT = 198px
+   NOTE:
+   SVG files contain transparent padding,
+   so their 95×95 boxes intentionally
+   overlap slightly to reduce the visible
+   black-shape spacing.
 ======================================== */
 
 .tree-icons.three-icons {
     position: relative;
 
     width: 198px;
-    height: 198px;
+    height: 170px;
 
     justify-self: start;
     align-self: center;
@@ -464,13 +460,8 @@ body {
     width: 95px;
     height: 95px;
 
-    /*
-       (198 - 95) / 2
-       = 51.5px
-    */
-
     left: 51.5px;
-    top: 0;
+    top: 15px;
 
     object-fit: contain;
 }
@@ -487,13 +478,8 @@ body {
     width: 95px;
     height: 95px;
 
-    left: 0;
-
-    /*
-       95 + 8 = 103px
-    */
-
-    top: 103px;
+    left: 7px;
+    top: 75px;
 
     object-fit: contain;
 }
@@ -510,12 +496,8 @@ body {
     width: 95px;
     height: 95px;
 
-    /*
-       95 + 8 = 103px
-    */
-
-    left: 103px;
-    top: 103px;
+    left: 96px;
+    top: 75px;
 
     object-fit: contain;
 }
@@ -523,8 +505,6 @@ body {
 
 /* ========================================
    ONE ICON
-
-   95 × 95
 ======================================== */
 
 .tree-icons.one-icon {
@@ -545,8 +525,6 @@ body {
 
 /* ========================================
    TWO ICONS
-
-   95 + 8 + 95 = 198px
 ======================================== */
 
 .tree-icons.two-icons {
@@ -571,12 +549,6 @@ body {
 
 /* ========================================
    FOUR ICONS
-
-   95   8   95
-
-        8
-
-   95   8   95
 ======================================== */
 
 .tree-icons.four-icons {
@@ -650,13 +622,15 @@ body {
     }
 
 
-    /* KEEP ICON SIZE = 95px
-       KEEP GAP = 8px */
+    /* THREE ICON GROUP */
 
     .tree-icons.three-icons {
         width: 198px;
-        height: 198px;
+        height: 170px;
     }
+
+
+    /* KEEP ICON SIZE = 95px */
 
     .tree-icons img {
         width: 95px;
