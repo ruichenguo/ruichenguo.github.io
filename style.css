@@ -415,30 +415,22 @@ body {
 
 
 /* ========================================
-   PROJECT 01 — THREE CROPPED SVG ICONS
+   PROJECT 01 — THREE CROPPED ICONS
 
-   Files:
+                 ROAD
+
+
+       CCTV             CONDUIT
+        ───────── CENTER ─────────
+
+   Cropped SVG files:
 
    Road 1a.svg
    CCTV 1a.svg
    Conduit 1a.svg
-
-   TARGET:
-
-                 ROAD
-
-                  9px
-
-         CCTV  ← 6px →  CONDUIT
 ======================================== */
 
 .tree-icons.three-icons {
-    /*
-       We use a fixed positioning area instead
-       of forcing all three SVGs into identical
-       95 × 95 boxes.
-    */
-
     position: relative;
 
     width: 196px;
@@ -452,11 +444,14 @@ body {
 /* ========================================
    ROAD
 
-   Original cropped aspect ratio:
-   approximately 1.615 : 1
+   Cropped aspect ratio:
+   1406.6715 / 870.94489
 
    Width = 95px
-   Height ≈ 59px
+   Height ≈ 58.82px
+
+   Centered horizontally:
+   (196 - 95) / 2 = 50.5px
 ======================================== */
 
 .three-icons .icon-road {
@@ -467,13 +462,6 @@ body {
 
     max-width: none;
 
-    /*
-       Center Road over the complete
-       two-icon group.
-
-       (196 - 95) / 2 = 50.5px
-    */
-
     left: 50.5px;
     top: 0;
 
@@ -481,21 +469,31 @@ body {
     padding: 0;
 
     transform: none;
+
+    object-fit: contain;
 }
 
 
 /* ========================================
    CCTV
 
-   Original cropped aspect ratio:
-   approximately 1.637 : 1
+   Cropped aspect ratio:
+   1412.0958 / 862.42474
 
    Width = 95px
    Height ≈ 58px
 
-   Road height ≈ 59px
-   + 9px vertical gap
-   = top 68px
+   CENTER ALIGNMENT:
+
+   Conduit center:
+   68 + (95 / 2)
+   = 115.5px
+
+   CCTV height ≈ 58px
+
+   CCTV top:
+   115.5 - (58 / 2)
+   ≈ 86.5px
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -507,26 +505,30 @@ body {
     max-width: none;
 
     left: 0;
-    top: 68px;
+    top: 86.5px;
 
     margin: 0;
     padding: 0;
 
     transform: none;
+
+    object-fit: contain;
 }
 
 
 /* ========================================
    CONDUIT
 
-   Cropped SVG is portrait.
-
    Height = 95px
-   Width ≈ 60px
 
    CCTV width = 95px
-   + 6px visual gap
-   = left 101px
+   Horizontal gap = 6px
+
+   Left:
+   95 + 6 = 101px
+
+   Vertical center:
+   68 + 47.5 = 115.5px
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -544,6 +546,8 @@ body {
     padding: 0;
 
     transform: none;
+
+    object-fit: contain;
 }
 
 
@@ -674,7 +678,7 @@ body {
     }
 
 
-    /* PROJECT 01 */
+    /* THREE ICON GROUP */
 
     .tree-icons.three-icons {
         width: 196px;
@@ -693,14 +697,16 @@ body {
     }
 
 
-    /* CCTV */
+    /* CCTV
+       CENTER ALIGNED WITH CONDUIT
+    */
 
     .three-icons .icon-cctv {
         width: 95px;
         height: auto;
 
         left: 0;
-        top: 68px;
+        top: 86.5px;
     }
 
 
