@@ -395,8 +395,6 @@ body {
 .tree-icons {
     grid-column: 1;
 
-    position: relative;
-
     justify-self: start;
     align-self: center;
 }
@@ -421,26 +419,36 @@ body {
 
 
 /* ========================================
-   PROJECT 01
-   THREE ICON LAYOUT
+   PROJECT 01 — THREE ICONS
 
-              ROAD
+             ROAD
+              │
+          25px GAP
+              │
+       CCTV ←8px→ CONDUIT
 
-
-       CCTV        CONDUIT
-
-   IMPORTANT:
-   Container height stays fixed.
-   Only second row is moved down.
+   ICON SIZE = 95 × 95px
 ======================================== */
 
 .tree-icons.three-icons {
-    position: relative;
-
     width: 198px;
+    height: auto;
 
-    /* KEEP THIS FIXED */
-    height: 170px;
+    display: grid;
+
+    grid-template-columns:
+        95px 95px;
+
+    grid-template-rows:
+        95px 95px;
+
+    /* SECOND ROW LEFT/RIGHT GAP */
+    column-gap: 8px;
+
+    /* TOP/BOTTOM ROW GAP */
+    row-gap: 25px;
+
+    position: relative;
 
     justify-self: start;
     align-self: center;
@@ -448,62 +456,72 @@ body {
 
 
 /* ========================================
-   ROAD
-   TOP CENTER
+   ROAD — FIRST ROW CENTER
 ======================================== */
 
 .three-icons .icon-road {
-    position: absolute;
+    position: static;
+
+    grid-column: 1 / 3;
+    grid-row: 1;
 
     width: 95px;
     height: 95px;
 
-    left: 51.5px;
+    justify-self: center;
+    align-self: center;
 
-    /* ROAD STAYS FIXED */
-    top: 15px;
+    margin: 0;
+
+    transform: none;
 
     object-fit: contain;
 }
 
 
 /* ========================================
-   CCTV
-   SECOND ROW — LEFT
+   CCTV — SECOND ROW LEFT
 ======================================== */
 
 .three-icons .icon-cctv {
-    position: absolute;
+    position: static;
+
+    grid-column: 1;
+    grid-row: 2;
 
     width: 95px;
     height: 95px;
 
-    /* HORIZONTAL POSITION UNCHANGED */
-    left: 7px;
+    justify-self: center;
+    align-self: center;
 
-    /* MOVED DOWN */
-    top: 90px;
+    margin: 0;
+
+    transform: none;
 
     object-fit: contain;
 }
 
 
 /* ========================================
-   CONDUIT
-   SECOND ROW — RIGHT
+   CONDUIT — SECOND ROW RIGHT
 ======================================== */
 
 .three-icons .icon-conduit {
-    position: absolute;
+    position: static;
+
+    grid-column: 2;
+    grid-row: 2;
 
     width: 95px;
     height: 95px;
 
-    /* HORIZONTAL POSITION UNCHANGED */
-    left: 96px;
+    justify-self: center;
+    align-self: center;
 
-    /* MOVED DOWN */
-    top: 90px;
+    margin: 0;
+
+    transform: none;
 
     object-fit: contain;
 }
@@ -559,7 +577,7 @@ body {
 
 .tree-icons.four-icons {
     width: 198px;
-    height: 198px;
+    height: auto;
 
     display: grid;
 
@@ -628,17 +646,25 @@ body {
     }
 
 
-    /* THREE ICON GROUP */
+    /* PROJECT 01 THREE ICONS */
 
     .tree-icons.three-icons {
         width: 198px;
 
-        /* KEEP SAME HEIGHT */
-        height: 170px;
+        grid-template-columns:
+            95px 95px;
+
+        grid-template-rows:
+            95px 95px;
+
+        column-gap: 8px;
+
+        /* SAME VERTICAL GAP */
+        row-gap: 25px;
     }
 
 
-    /* KEEP ICON SIZE = 95px */
+    /* KEEP ICON SIZE */
 
     .tree-icons img {
         width: 95px;
