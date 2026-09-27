@@ -335,7 +335,6 @@ body {
     position: relative;
 
     width: 100%;
-
     min-height: 220px;
 
     display: grid;
@@ -405,8 +404,6 @@ body {
 
 /* ========================================
    ALL PROJECT ICONS
-
-   ICON SIZE = 95 × 95
 ======================================== */
 
 .tree-icons img {
@@ -425,23 +422,25 @@ body {
 
 /* ========================================
    PROJECT 01
-   THREE ICON VISUAL LAYOUT
+   THREE ICON LAYOUT
 
               ROAD
 
 
        CCTV        CONDUIT
 
-   SVG files contain transparent padding.
-   Positions below are adjusted for
-   VISUAL spacing.
+   IMPORTANT:
+   Container height stays fixed.
+   Only second row is moved down.
 ======================================== */
 
 .tree-icons.three-icons {
     position: relative;
 
     width: 198px;
-    height: 180px;
+
+    /* KEEP THIS FIXED */
+    height: 170px;
 
     justify-self: start;
     align-self: center;
@@ -460,6 +459,8 @@ body {
     height: 95px;
 
     left: 51.5px;
+
+    /* ROAD STAYS FIXED */
     top: 15px;
 
     object-fit: contain;
@@ -468,7 +469,7 @@ body {
 
 /* ========================================
    CCTV
-   BOTTOM LEFT
+   SECOND ROW — LEFT
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -477,8 +478,11 @@ body {
     width: 95px;
     height: 95px;
 
+    /* HORIZONTAL POSITION UNCHANGED */
     left: 7px;
-    top: 85px;
+
+    /* MOVED DOWN */
+    top: 90px;
 
     object-fit: contain;
 }
@@ -486,7 +490,7 @@ body {
 
 /* ========================================
    CONDUIT
-   BOTTOM RIGHT
+   SECOND ROW — RIGHT
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -495,8 +499,11 @@ body {
     width: 95px;
     height: 95px;
 
+    /* HORIZONTAL POSITION UNCHANGED */
     left: 96px;
-    top: 85px;
+
+    /* MOVED DOWN */
+    top: 90px;
 
     object-fit: contain;
 }
@@ -625,7 +632,9 @@ body {
 
     .tree-icons.three-icons {
         width: 198px;
-        height: 180px;
+
+        /* KEEP SAME HEIGHT */
+        height: 170px;
     }
 
 
