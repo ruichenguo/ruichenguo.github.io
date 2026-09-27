@@ -700,4 +700,13 @@ body {
         top: 68px;
     }
 
+/* ===== DEBUG TEST ===== */
+
+.three-icons .icon-conduit {
+    left: 160px !important;
+    outline: 5px solid red !important;
+}
+
+.three-icons .icon-cctv {
+    outline: 5px solid blue !important;
 }
