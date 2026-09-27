@@ -430,10 +430,10 @@ body {
    三个图标竖直排列
    三个中心线完全对齐
 
-   整组向右移动 24.5px
+   整组向右移动 49.5px
 
    Road / CCTV 右边缘
-   到竖线约 45px
+   到竖线约 20px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -449,7 +449,7 @@ body {
 
     position: relative;
 
-    left: 24.5px;
+    left: 49.5px;
 
     justify-self: start;
     align-self: center;
@@ -691,7 +691,7 @@ body {
 
         position: relative;
 
-        left: 24.5px;
+        left: 49.5px;
 
         margin: 0;
         padding: 0;
