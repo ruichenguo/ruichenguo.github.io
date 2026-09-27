@@ -4,7 +4,6 @@
 
 :root {
     --page-width: 1200px;
-
     --side-padding: 48px;
     --column-gap: 48px;
 
@@ -349,7 +348,7 @@ body {
 
 
 /* ========================================
-   HORIZONTAL TREE BRANCH
+   HORIZONTAL BRANCH
 ======================================== */
 
 .tree-line {
@@ -417,19 +416,18 @@ body {
 /* ========================================
    PROJECT 01 — THREE ICONS
 
+                  │
+                  │
+                ROAD
+                  │
+                  │
+       CCTV       │       CONDUIT
+       <------------------------>
 
-                CENTER
-                   │
-                   │
-                 ROAD
-                   │
-                   │
-        CCTV  9px  CONDUIT
-        <--------------->
+   Road center is aligned with the
+   visual center of CCTV + Conduit.
 
-   The visual center of the bottom
-   two icons is aligned with the
-   center of Road.
+   CCTV and Conduit maintain 9px gap.
 ======================================== */
 
 .tree-icons.three-icons {
@@ -448,10 +446,10 @@ body {
 
    Width = 95px
 
-   Left = 50.5px
+   left = 50.5px
 
    Center:
-   50.5 + 47.5
+   50.5 + 95 / 2
    = 98px
 ======================================== */
 
@@ -480,12 +478,11 @@ body {
 
    Width = 95px
 
-   Bottom group starts at:
-   16px
+   New left = 21px
 
    Right edge:
-   16 + 95
-   = 111px
+   21 + 95
+   = 116px
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -496,7 +493,7 @@ body {
 
     max-width: none;
 
-    left: 16px;
+    left: 21px;
     top: 86.5px;
 
     margin: 0;
@@ -512,28 +509,17 @@ body {
    CONDUIT
 
    CCTV right edge:
-   111px
+   21 + 95 = 116px
 
    Gap:
    9px
 
    Conduit left:
-   111 + 9
-   = 120px
+   116 + 9 = 125px
 
-   Height:
-   95px
-
-   Approximate width:
-   60px
-
-   Bottom group:
-   16px → approximately 180px
-
-   Bottom group center:
-   approximately 98px
-
-   Same as Road center.
+   CCTV + Conduit therefore move
+   together while preserving the
+   original 9px spacing.
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -544,7 +530,7 @@ body {
 
     max-width: none;
 
-    left: 120px;
+    left: 125px;
     top: 68px;
 
     margin: 0;
@@ -675,7 +661,7 @@ body {
     }
 
 
-    /* PROJECT TREE */
+    /* TREE */
 
     .project-tree {
         --icon-zone: 215px;
@@ -708,7 +694,7 @@ body {
         width: 95px;
         height: auto;
 
-        left: 16px;
+        left: 21px;
         top: 86.5px;
     }
 
@@ -719,8 +705,7 @@ body {
         width: auto;
         height: 95px;
 
-        left: 120px;
+        left: 125px;
         top: 68px;
     }
-
 }
