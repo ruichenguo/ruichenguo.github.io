@@ -679,3 +679,11 @@ body {
     }
 
 }
+.tree-icons.three-icons {
+    row-gap: 60px !important;
+    column-gap: 40px !important;
+}
+
+.three-icons .icon-road {
+    outline: 5px solid red !important;
+}
