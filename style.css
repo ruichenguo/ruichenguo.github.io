@@ -420,10 +420,10 @@ body {
                  ROAD
 
 
-       CCTV             CONDUIT
+       CCTV  ← 9px →  CONDUIT
         ───────── CENTER ─────────
 
-   Cropped SVG files:
+   Files:
 
    Road 1a.svg
    CCTV 1a.svg
@@ -442,15 +442,13 @@ body {
 
 
 /* ========================================
-   ROAD
-
-   Cropped aspect ratio:
-   1406.6715 / 870.94489
+   ROAD — TOP CENTER
 
    Width = 95px
    Height ≈ 58.82px
 
-   Centered horizontally:
+   Centered in 196px area:
+
    (196 - 95) / 2 = 50.5px
 ======================================== */
 
@@ -475,25 +473,12 @@ body {
 
 
 /* ========================================
-   CCTV
-
-   Cropped aspect ratio:
-   1412.0958 / 862.42474
+   CCTV — BOTTOM LEFT
 
    Width = 95px
    Height ≈ 58px
 
-   CENTER ALIGNMENT:
-
-   Conduit center:
-   68 + (95 / 2)
-   = 115.5px
-
-   CCTV height ≈ 58px
-
-   CCTV top:
-   115.5 - (58 / 2)
-   ≈ 86.5px
+   Center Y ≈ 115.5px
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -517,15 +502,18 @@ body {
 
 
 /* ========================================
-   CONDUIT
+   CONDUIT — BOTTOM RIGHT
 
    Height = 95px
 
-   CCTV width = 95px
-   Horizontal gap = 6px
+   CCTV:
+   left = 0
+   width = 95px
 
-   Left:
-   95 + 6 = 101px
+   GAP = 9px
+
+   Conduit left:
+   95 + 9 = 104px
 
    Vertical center:
    68 + 47.5 = 115.5px
@@ -539,7 +527,7 @@ body {
 
     max-width: none;
 
-    left: 101px;
+    left: 104px;
     top: 68px;
 
     margin: 0;
@@ -579,7 +567,7 @@ body {
 ======================================== */
 
 .tree-icons.two-icons {
-    width: 196px;
+    width: 199px;
     min-height: 95px;
 
     display: flex;
@@ -587,7 +575,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 6px;
+    gap: 9px;
 }
 
 .tree-icons.two-icons img {
@@ -604,7 +592,7 @@ body {
 ======================================== */
 
 .tree-icons.four-icons {
-    width: 196px;
+    width: 199px;
 
     display: grid;
 
@@ -614,7 +602,7 @@ body {
     grid-template-rows:
         95px 95px;
 
-    column-gap: 6px;
+    column-gap: 9px;
     row-gap: 9px;
 }
 
@@ -697,9 +685,7 @@ body {
     }
 
 
-    /* CCTV
-       CENTER ALIGNED WITH CONDUIT
-    */
+    /* CCTV */
 
     .three-icons .icon-cctv {
         width: 95px;
@@ -716,7 +702,7 @@ body {
         width: auto;
         height: 95px;
 
-        left: 101px;
+        left: 104px;
         top: 68px;
     }
 
