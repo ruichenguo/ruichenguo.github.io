@@ -349,7 +349,7 @@ body {
 
 
 /* ========================================
-   HORIZONTAL TREE LINE
+   HORIZONTAL BRANCH
 ======================================== */
 
 .tree-line {
@@ -401,61 +401,48 @@ body {
 
 
 /* ========================================
-   ALL PROJECT ICONS
+   GENERAL ICON RULE
 ======================================== */
 
 .tree-icons img {
     display: block;
 
-    width: 95px;
-    height: 95px;
-
     margin: 0;
     padding: 0;
 
     object-fit: contain;
-    object-position: center;
 }
 
 
 /* ========================================
-   PROJECT 01 — THREE ICONS
+   PROJECT 01 — THREE CROPPED SVG ICONS
 
-               ROAD
-              95 × 95
+   Files:
 
-                 ↕
-                9px
-                 ↕
+   Road 1a.svg
+   CCTV 1a.svg
+   Conduit 1a.svg
 
-       CCTV ← 6px → CONDUIT
-       95 × 95       95 × 95
+   TARGET:
 
+                 ROAD
 
-   TOTAL WIDTH:
-   95 + 6 + 95 = 196px
+                  9px
 
-   TOTAL HEIGHT:
-   95 + 9 + 95 = 199px
+         CCTV  ← 6px →  CONDUIT
 ======================================== */
 
 .tree-icons.three-icons {
+    /*
+       We use a fixed positioning area instead
+       of forcing all three SVGs into identical
+       95 × 95 boxes.
+    */
+
+    position: relative;
+
     width: 196px;
     height: 199px;
-
-    display: grid;
-
-    grid-template-columns:
-        95px 95px;
-
-    grid-template-rows:
-        95px 95px;
-
-    /* LEFT / RIGHT */
-    column-gap: 6px;
-
-    /* TOP / BOTTOM */
-    row-gap: 9px;
 
     justify-self: start;
     align-self: center;
@@ -463,77 +450,100 @@ body {
 
 
 /* ========================================
-   ROAD — TOP CENTER
+   ROAD
+
+   Original cropped aspect ratio:
+   approximately 1.615 : 1
+
+   Width = 95px
+   Height ≈ 59px
 ======================================== */
 
 .three-icons .icon-road {
-    position: static;
-
-    grid-column: 1 / 3;
-    grid-row: 1;
+    position: absolute;
 
     width: 95px;
-    height: 95px;
+    height: auto;
 
-    justify-self: center;
-    align-self: center;
+    max-width: none;
+
+    /*
+       Center Road over the complete
+       two-icon group.
+
+       (196 - 95) / 2 = 50.5px
+    */
+
+    left: 50.5px;
+    top: 0;
 
     margin: 0;
     padding: 0;
 
     transform: none;
-
-    object-fit: contain;
 }
 
 
 /* ========================================
-   CCTV — BOTTOM LEFT
+   CCTV
+
+   Original cropped aspect ratio:
+   approximately 1.637 : 1
+
+   Width = 95px
+   Height ≈ 58px
+
+   Road height ≈ 59px
+   + 9px vertical gap
+   = top 68px
 ======================================== */
 
 .three-icons .icon-cctv {
-    position: static;
-
-    grid-column: 1;
-    grid-row: 2;
+    position: absolute;
 
     width: 95px;
-    height: 95px;
+    height: auto;
 
-    justify-self: center;
-    align-self: center;
+    max-width: none;
+
+    left: 0;
+    top: 68px;
 
     margin: 0;
     padding: 0;
 
     transform: none;
-
-    object-fit: contain;
 }
 
 
 /* ========================================
-   CONDUIT — BOTTOM RIGHT
+   CONDUIT
+
+   Cropped SVG is portrait.
+
+   Height = 95px
+   Width ≈ 60px
+
+   CCTV width = 95px
+   + 6px visual gap
+   = left 101px
 ======================================== */
 
 .three-icons .icon-conduit {
-    position: static;
+    position: absolute;
 
-    grid-column: 2;
-    grid-row: 2;
-
-    width: 95px;
+    width: auto;
     height: 95px;
 
-    justify-self: center;
-    align-self: center;
+    max-width: none;
+
+    left: 101px;
+    top: 68px;
 
     margin: 0;
     padding: 0;
 
     transform: none;
-
-    object-fit: contain;
 }
 
 
@@ -552,8 +562,11 @@ body {
 }
 
 .tree-icons.one-icon img {
-    width: 95px;
-    height: 95px;
+    max-width: 95px;
+    max-height: 95px;
+
+    width: auto;
+    height: auto;
 }
 
 
@@ -563,21 +576,22 @@ body {
 
 .tree-icons.two-icons {
     width: 196px;
-    height: 95px;
+    min-height: 95px;
 
-    display: grid;
-
-    grid-template-columns:
-        95px 95px;
-
-    column-gap: 6px;
+    display: flex;
 
     align-items: center;
+    justify-content: center;
+
+    gap: 6px;
 }
 
 .tree-icons.two-icons img {
-    width: 95px;
-    height: 95px;
+    max-width: 95px;
+    max-height: 95px;
+
+    width: auto;
+    height: auto;
 }
 
 
@@ -587,7 +601,6 @@ body {
 
 .tree-icons.four-icons {
     width: 196px;
-    height: 199px;
 
     display: grid;
 
@@ -602,8 +615,14 @@ body {
 }
 
 .tree-icons.four-icons img {
-    width: 95px;
-    height: 95px;
+    max-width: 95px;
+    max-height: 95px;
+
+    width: auto;
+    height: auto;
+
+    justify-self: center;
+    align-self: center;
 }
 
 
@@ -655,28 +674,44 @@ body {
     }
 
 
-    /* THREE ICONS */
+    /* PROJECT 01 */
 
     .tree-icons.three-icons {
         width: 196px;
         height: 199px;
-
-        grid-template-columns:
-            95px 95px;
-
-        grid-template-rows:
-            95px 95px;
-
-        column-gap: 6px;
-        row-gap: 9px;
     }
 
 
-    /* ICON SIZE */
+    /* ROAD */
 
-    .tree-icons img {
+    .three-icons .icon-road {
         width: 95px;
+        height: auto;
+
+        left: 50.5px;
+        top: 0;
+    }
+
+
+    /* CCTV */
+
+    .three-icons .icon-cctv {
+        width: 95px;
+        height: auto;
+
+        left: 0;
+        top: 68px;
+    }
+
+
+    /* CONDUIT */
+
+    .three-icons .icon-conduit {
+        width: auto;
         height: 95px;
+
+        left: 101px;
+        top: 68px;
     }
 
 }
