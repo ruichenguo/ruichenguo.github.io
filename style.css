@@ -417,12 +417,16 @@ body {
 /* ========================================
    PROJECT 01 — THREE ICONS
 
-   DEBUG VERSION
+                   ROAD
+                    ↓
+                  ~10px
+                    ↓
+          CCTV             CONDUIT
+                ← 12px →
 
-   BLUE = CCTV IMAGE BOX
-   RED  = CONDUIT IMAGE BOX
-
-   Current CSS-box gap = 30px
+   Road → CCTV    ≈ 10px
+   Road → Conduit ≈ 10px
+   CCTV ↔ Conduit = 12px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -438,6 +442,9 @@ body {
 
 /* ========================================
    ROAD
+
+   width = 95px
+   rendered height ≈ 58.8px
 ======================================== */
 
 .three-icons .icon-road {
@@ -463,7 +470,14 @@ body {
 /* ========================================
    CCTV
 
-   BLUE BORDER
+   Road bottom ≈ 58.8px
+   CCTV top = 68.8px
+
+   vertical gap ≈ 10px
+
+   left = 5.5px
+   width = 95px
+   right edge = 100.5px
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -474,8 +488,8 @@ body {
 
     max-width: none;
 
-    left: -3.5px;
-    top: 86.5px;
+    left: 5.5px;
+    top: 68.8px;
 
     margin: 0;
     padding: 0;
@@ -483,15 +497,21 @@ body {
     transform: none;
 
     object-fit: contain;
-
-    outline: 2px solid blue !important;
 }
 
 
 /* ========================================
    CONDUIT
 
-   RED BORDER
+   Road bottom ≈ 58.8px
+   Conduit top = 68.8px
+
+   vertical gap ≈ 10px
+
+   left = 112.5px
+
+   horizontal gap:
+   112.5 - 100.5 = 12px
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -502,8 +522,8 @@ body {
 
     max-width: none;
 
-    left: 121.5px;
-    top: 68px;
+    left: 112.5px;
+    top: 68.8px;
 
     margin: 0;
     padding: 0;
@@ -511,8 +531,6 @@ body {
     transform: none;
 
     object-fit: contain;
-
-    outline: 2px solid red !important;
 }
 
 
@@ -544,7 +562,7 @@ body {
 ======================================== */
 
 .tree-icons.two-icons {
-    width: 199px;
+    width: 202px;
     min-height: 95px;
 
     display: flex;
@@ -552,7 +570,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 9px;
+    gap: 12px;
 }
 
 .tree-icons.two-icons img {
@@ -569,7 +587,7 @@ body {
 ======================================== */
 
 .tree-icons.four-icons {
-    width: 199px;
+    width: 202px;
 
     display: grid;
 
@@ -579,7 +597,7 @@ body {
     grid-template-rows:
         95px 95px;
 
-    column-gap: 9px;
+    column-gap: 12px;
     row-gap: 9px;
 }
 
@@ -668,10 +686,8 @@ body {
         width: 95px;
         height: auto;
 
-        left: -3.5px;
-        top: 86.5px;
-
-        outline: 2px solid blue !important;
+        left: 5.5px;
+        top: 68.8px;
     }
 
 
@@ -681,10 +697,8 @@ body {
         width: auto;
         height: 95px;
 
-        left: 121.5px;
-        top: 68px;
-
-        outline: 2px solid red !important;
+        left: 112.5px;
+        top: 68.8px;
     }
 
 }
