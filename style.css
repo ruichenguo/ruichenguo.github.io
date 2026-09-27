@@ -219,7 +219,7 @@ body {
 
 
 /* ========================================
-   PROJECT GRID
+   THREE PROJECT COLUMNS
 ======================================== */
 
 .projects-grid {
@@ -328,7 +328,7 @@ body {
 
 
 /* ========================================
-   TREE ITEM
+   EACH PROJECT ROW
 ======================================== */
 
 .tree-item {
@@ -349,7 +349,7 @@ body {
 
 
 /* ========================================
-   TREE BRANCH
+   HORIZONTAL TREE BRANCH
 ======================================== */
 
 .tree-line {
@@ -389,7 +389,7 @@ body {
 
 
 /* ========================================
-   ICON AREA
+   GENERAL ICON AREA
 ======================================== */
 
 .tree-icons {
@@ -398,6 +398,11 @@ body {
     justify-self: start;
     align-self: center;
 }
+
+
+/* ========================================
+   GENERAL ICON RULE
+======================================== */
 
 .tree-icons img {
     display: block;
@@ -410,13 +415,27 @@ body {
 
 
 /* ========================================
-   PROJECT 01 ICON GROUP
+   PROJECT 01 — THREE ICONS
+
+
+                CENTER
+                   │
+                   │
+                 ROAD
+                   │
+                   │
+        CCTV  9px  CONDUIT
+        <--------------->
+
+   The visual center of the bottom
+   two icons is aligned with the
+   center of Road.
 ======================================== */
 
 .tree-icons.three-icons {
     position: relative;
 
-    width: 215px;
+    width: 196px;
     height: 199px;
 
     justify-self: start;
@@ -426,6 +445,14 @@ body {
 
 /* ========================================
    ROAD
+
+   Width = 95px
+
+   Left = 50.5px
+
+   Center:
+   50.5 + 47.5
+   = 98px
 ======================================== */
 
 .three-icons .icon-road {
@@ -450,6 +477,15 @@ body {
 
 /* ========================================
    CCTV
+
+   Width = 95px
+
+   Bottom group starts at:
+   16px
+
+   Right edge:
+   16 + 95
+   = 111px
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -460,7 +496,7 @@ body {
 
     max-width: none;
 
-    left: 0;
+    left: 16px;
     top: 86.5px;
 
     margin: 0;
@@ -474,6 +510,30 @@ body {
 
 /* ========================================
    CONDUIT
+
+   CCTV right edge:
+   111px
+
+   Gap:
+   9px
+
+   Conduit left:
+   111 + 9
+   = 120px
+
+   Height:
+   95px
+
+   Approximate width:
+   60px
+
+   Bottom group:
+   16px → approximately 180px
+
+   Bottom group center:
+   approximately 98px
+
+   Same as Road center.
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -484,7 +544,7 @@ body {
 
     max-width: none;
 
-    left: 160px;
+    left: 120px;
     top: 68px;
 
     margin: 0;
@@ -524,7 +584,7 @@ body {
 ======================================== */
 
 .tree-icons.two-icons {
-    width: 196px;
+    width: 199px;
     min-height: 95px;
 
     display: flex;
@@ -585,6 +645,9 @@ body {
         --side-padding: 20px;
     }
 
+
+    /* PROFILE */
+
     .profile-row {
         grid-template-columns: 1fr;
 
@@ -594,6 +657,9 @@ body {
     .section-logo {
         justify-self: start;
     }
+
+
+    /* PROJECTS */
 
     .projects-grid {
         grid-template-columns: 1fr;
@@ -608,15 +674,24 @@ body {
         margin: 0 auto;
     }
 
+
+    /* PROJECT TREE */
+
     .project-tree {
         --icon-zone: 215px;
         --branch-width: 65px;
     }
 
+
+    /* THREE ICON GROUP */
+
     .tree-icons.three-icons {
-        width: 215px;
+        width: 196px;
         height: 199px;
     }
+
+
+    /* ROAD */
 
     .three-icons .icon-road {
         width: 95px;
@@ -626,41 +701,26 @@ body {
         top: 0;
     }
 
+
+    /* CCTV */
+
     .three-icons .icon-cctv {
         width: 95px;
         height: auto;
 
-        left: 0;
+        left: 16px;
         top: 86.5px;
     }
+
+
+    /* CONDUIT */
 
     .three-icons .icon-conduit {
         width: auto;
         height: 95px;
 
-        left: 160px;
+        left: 120px;
         top: 68px;
     }
 
-}
-
-
-/* ========================================
-   DEBUG TEST
-
-   If this CSS is actually loaded:
-
-   CCTV = BLUE BOX
-   CONDUIT = RED BOX
-
-   Conduit will also move far right.
-======================================== */
-
-.three-icons .icon-cctv {
-    outline: 5px solid blue !important;
-}
-
-.three-icons .icon-conduit {
-    left: 160px !important;
-    outline: 5px solid red !important;
 }
