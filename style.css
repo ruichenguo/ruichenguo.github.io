@@ -4,6 +4,7 @@
 
 :root {
     --page-width: 1200px;
+
     --side-padding: 48px;
     --column-gap: 48px;
 
@@ -416,18 +417,19 @@ body {
 /* ========================================
    PROJECT 01 — THREE ICONS
 
-                  │
-                  │
-                ROAD
-                  │
-                  │
-       CCTV       │       CONDUIT
-       <------------------------>
+                    ROAD
+                     │
+                     │
+          CCTV       │      CONDUIT
 
-   Road center is aligned with the
-   visual center of CCTV + Conduit.
+   Road stays fixed.
 
-   CCTV and Conduit maintain 9px gap.
+   CCTV + Conduit are shifted left
+   together compared with the previous
+   version.
+
+   Horizontal gap between CCTV and
+   Conduit remains exactly 9px.
 ======================================== */
 
 .tree-icons.three-icons {
@@ -444,12 +446,11 @@ body {
 /* ========================================
    ROAD
 
-   Width = 95px
-
+   width = 95px
    left = 50.5px
 
-   Center:
-   50.5 + 95 / 2
+   Road center:
+   50.5 + 47.5
    = 98px
 ======================================== */
 
@@ -476,13 +477,14 @@ body {
 /* ========================================
    CCTV
 
-   Width = 95px
+   width = 95px
 
-   New left = 21px
+   NEW LEFT:
+   7px
 
-   Right edge:
-   21 + 95
-   = 116px
+   right edge:
+   7 + 95
+   = 102px
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -493,7 +495,7 @@ body {
 
     max-width: none;
 
-    left: 21px;
+    left: 7px;
     top: 86.5px;
 
     margin: 0;
@@ -509,17 +511,19 @@ body {
    CONDUIT
 
    CCTV right edge:
-   21 + 95 = 116px
+   7 + 95 = 102px
 
-   Gap:
+   gap:
    9px
 
    Conduit left:
-   116 + 9 = 125px
+   102 + 9
+   = 111px
 
-   CCTV + Conduit therefore move
-   together while preserving the
-   original 9px spacing.
+   Therefore:
+
+   111 - (7 + 95)
+   = 9px
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -530,7 +534,7 @@ body {
 
     max-width: none;
 
-    left: 125px;
+    left: 111px;
     top: 68px;
 
     margin: 0;
@@ -661,7 +665,7 @@ body {
     }
 
 
-    /* TREE */
+    /* PROJECT TREE */
 
     .project-tree {
         --icon-zone: 215px;
@@ -694,7 +698,7 @@ body {
         width: 95px;
         height: auto;
 
-        left: 21px;
+        left: 7px;
         top: 86.5px;
     }
 
@@ -705,7 +709,8 @@ body {
         width: auto;
         height: 95px;
 
-        left: 125px;
+        left: 111px;
         top: 68px;
     }
+
 }
