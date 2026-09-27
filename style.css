@@ -417,16 +417,12 @@ body {
 /* ========================================
    PROJECT 01 — THREE ICONS
 
-   TEST VERSION
+   DEBUG VERSION
 
-                ROAD
+   BLUE = CCTV IMAGE BOX
+   RED  = CONDUIT IMAGE BOX
 
-       CCTV        CONDUIT
-
-   CCTV / Conduit CSS gap = 30px
-
-   This is intentionally large so the
-   change should be clearly visible.
+   Current CSS-box gap = 30px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -467,12 +463,7 @@ body {
 /* ========================================
    CCTV
 
-   left = -3.5px
-   width = 95px
-
-   right edge:
-   -3.5 + 95
-   = 91.5px
+   BLUE BORDER
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -492,17 +483,15 @@ body {
     transform: none;
 
     object-fit: contain;
+
+    outline: 2px solid blue !important;
 }
 
 
 /* ========================================
    CONDUIT
 
-   left = 121.5px
-
-   gap:
-   121.5 - 91.5
-   = 30px
+   RED BORDER
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -522,6 +511,8 @@ body {
     transform: none;
 
     object-fit: contain;
+
+    outline: 2px solid red !important;
 }
 
 
@@ -679,10 +670,12 @@ body {
 
         left: -3.5px;
         top: 86.5px;
+
+        outline: 2px solid blue !important;
     }
 
 
-    /* CONDUIT — TEST 30px GAP */
+    /* CONDUIT */
 
     .three-icons .icon-conduit {
         width: auto;
@@ -690,6 +683,8 @@ body {
 
         left: 121.5px;
         top: 68px;
+
+        outline: 2px solid red !important;
     }
 
 }
