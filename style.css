@@ -415,15 +415,17 @@ body {
 
 
 /* ========================================
-   PROJECT 01 — THREE CROPPED ICONS
+   PROJECT 01 — THREE CROPPED SVG ICONS
 
                  ROAD
 
 
        CCTV  ← 9px →  CONDUIT
-        ───────── CENTER ─────────
 
-   Files:
+       CCTV and CONDUIT are aligned
+       by their vertical centers.
+
+   Files used in HTML:
 
    Road 1a.svg
    CCTV 1a.svg
@@ -442,14 +444,16 @@ body {
 
 
 /* ========================================
-   ROAD — TOP CENTER
+   ROAD
 
-   Width = 95px
-   Height ≈ 58.82px
+   Cropped SVG:
+   1406.6715 × 870.94489
 
-   Centered in 196px area:
+   Display width:
+   95px
 
-   (196 - 95) / 2 = 50.5px
+   Display height:
+   approximately 58.82px
 ======================================== */
 
 .three-icons .icon-road {
@@ -460,7 +464,9 @@ body {
 
     max-width: none;
 
+    /* Center Road */
     left: 50.5px;
+
     top: 0;
 
     margin: 0;
@@ -473,12 +479,25 @@ body {
 
 
 /* ========================================
-   CCTV — BOTTOM LEFT
+   CCTV
 
-   Width = 95px
-   Height ≈ 58px
+   Cropped SVG:
+   1412.0958 × 862.42474
 
-   Center Y ≈ 115.5px
+   Display width:
+   95px
+
+   Display height:
+   approximately 58px
+
+   Left edge:
+   0px
+
+   Right edge:
+   95px
+
+   Vertical center:
+   approximately 115.5px
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -490,6 +509,8 @@ body {
     max-width: none;
 
     left: 0;
+
+    /* Center aligned with Conduit */
     top: 86.5px;
 
     margin: 0;
@@ -502,15 +523,16 @@ body {
 
 
 /* ========================================
-   CONDUIT — BOTTOM RIGHT
+   CONDUIT
 
-   Height = 95px
+   Display height:
+   95px
 
-   CCTV:
-   left = 0
-   width = 95px
+   CCTV right edge:
+   0 + 95 = 95px
 
-   GAP = 9px
+   Desired horizontal gap:
+   9px
 
    Conduit left:
    95 + 9 = 104px
@@ -527,7 +549,10 @@ body {
 
     max-width: none;
 
+    /* 9px gap from CCTV */
     left: 104px;
+
+    /* Center aligned with CCTV */
     top: 68px;
 
     margin: 0;
