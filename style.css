@@ -46,6 +46,7 @@ body {
 
 .hero {
     width: 100%;
+
     background: #dddddd;
 
     padding: 40px var(--side-padding);
@@ -53,22 +54,26 @@ body {
 
 .hero-text {
     width: min(100%, var(--page-width));
+
     margin: 0 auto;
 }
 
 .hero h1 {
     margin: 0 0 8px;
+
     font-size: 38px;
 }
 
 .hero h2 {
     margin: 0 0 8px;
+
     font-size: 26px;
     font-style: italic;
 }
 
 .hero p {
     margin: 0;
+
     font-size: 18px;
 }
 
@@ -120,6 +125,7 @@ body {
     height: 62px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -142,6 +148,7 @@ body {
     height: 90px;
 
     display: flex;
+
     align-items: flex-start;
     justify-content: center;
 
@@ -241,6 +248,7 @@ body {
     height: 100px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -404,18 +412,25 @@ body {
 /* ========================================
    PROJECT 01 — THREE ICONS
 
-   IMPORTANT:
+               ROAD
+              95 × 95
 
-   The SVG files contain transparent space.
+                10px
 
-   Therefore we use normal grid positioning
-   plus negative margins to visually reduce
-   the empty SVG padding.
+       CCTV ← 6px → CONDUIT
+       95 × 95       95 × 95
+
+
+   TOTAL WIDTH:
+   95 + 6 + 95 = 196px
+
+   TOTAL HEIGHT:
+   95 + 10 + 95 = 200px
 ======================================== */
 
 .tree-icons.three-icons {
-    width: 180px;
-    height: 175px;
+    width: 196px;
+    height: 200px;
 
     display: grid;
 
@@ -425,16 +440,11 @@ body {
     grid-template-rows:
         95px 95px;
 
-    /*
-       Grid gap itself stays at 0.
+    /* CCTV ↔ CONDUIT */
+    column-gap: 6px;
 
-       Visual spacing is controlled below
-       with margins because the SVG files
-       contain internal transparent padding.
-    */
-
-    column-gap: 0;
-    row-gap: 0;
+    /* ROAD ↕ SECOND ROW */
+    row-gap: 10px;
 
     justify-self: start;
     align-self: center;
@@ -457,13 +467,7 @@ body {
     justify-self: center;
     align-self: center;
 
-    /*
-       Move Road slightly downward toward
-       the second row.
-    */
-
-    margin: 10px 0 -10px 0;
-
+    margin: 0;
     padding: 0;
 
     transform: none;
@@ -485,20 +489,10 @@ body {
     width: 95px;
     height: 95px;
 
-    justify-self: end;
-    align-self: start;
+    justify-self: center;
+    align-self: center;
 
-    /*
-       Move CCTV toward Conduit.
-       Also move upward toward Road.
-    */
-
-    margin:
-        -10px
-        -8px
-        0
-        0;
-
+    margin: 0;
     padding: 0;
 
     transform: none;
@@ -520,20 +514,10 @@ body {
     width: 95px;
     height: 95px;
 
-    justify-self: start;
-    align-self: start;
+    justify-self: center;
+    align-self: center;
 
-    /*
-       Move Conduit toward CCTV.
-       Also move upward toward Road.
-    */
-
-    margin:
-        -10px
-        0
-        0
-        -8px;
-
+    margin: 0;
     padding: 0;
 
     transform: none;
@@ -547,7 +531,7 @@ body {
 ======================================== */
 
 .tree-icons.one-icon {
-    width: 180px;
+    width: 196px;
     height: 95px;
 
     display: flex;
@@ -567,15 +551,17 @@ body {
 ======================================== */
 
 .tree-icons.two-icons {
-    width: 180px;
+    width: 196px;
     height: 95px;
 
-    display: flex;
+    display: grid;
+
+    grid-template-columns:
+        95px 95px;
+
+    column-gap: 6px;
 
     align-items: center;
-    justify-content: center;
-
-    gap: 6px;
 }
 
 .tree-icons.two-icons img {
@@ -590,6 +576,7 @@ body {
 
 .tree-icons.four-icons {
     width: 196px;
+    height: 200px;
 
     display: grid;
 
@@ -600,7 +587,7 @@ body {
         95px 95px;
 
     column-gap: 6px;
-    row-gap: 8px;
+    row-gap: 10px;
 }
 
 .tree-icons.four-icons img {
@@ -657,11 +644,11 @@ body {
     }
 
 
-    /* THREE ICON GROUP */
+    /* THREE ICONS */
 
     .tree-icons.three-icons {
-        width: 180px;
-        height: 175px;
+        width: 196px;
+        height: 200px;
 
         grid-template-columns:
             95px 95px;
@@ -669,12 +656,12 @@ body {
         grid-template-rows:
             95px 95px;
 
-        column-gap: 0;
-        row-gap: 0;
+        column-gap: 6px;
+        row-gap: 10px;
     }
 
 
-    /* KEEP ICON SIZE */
+    /* ICON SIZE */
 
     .tree-icons img {
         width: 95px;
