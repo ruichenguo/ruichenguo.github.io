@@ -124,6 +124,9 @@ body {
     width: 190px;
     height: 62px;
 
+    margin: 0;
+    padding: 0;
+
     display: flex;
 
     align-items: center;
@@ -147,6 +150,9 @@ body {
     width: 90px;
     height: 90px;
 
+    margin: 0;
+    padding: 0;
+
     display: flex;
 
     align-items: flex-start;
@@ -160,6 +166,9 @@ body {
 
     width: 90px;
     height: 90px;
+
+    margin: 0;
+    padding: 0;
 
     object-fit: contain;
     object-position: center top;
@@ -176,7 +185,7 @@ body {
 }
 
 .section-content h3 {
-    margin: 0 0 6px;
+    margin: 0 0 6px 0;
     padding: 0;
 
     font-size: 21px;
@@ -184,7 +193,7 @@ body {
 }
 
 .section-content p {
-    margin: 6px 0 0;
+    margin: 6px 0 0 0;
     padding: 0;
 
     font-size: 17px;
@@ -415,10 +424,13 @@ body {
                ROAD
               95 × 95
 
-                 9px
+                 ↕
+                9px
+                 ↕
 
        CCTV ← 6px → CONDUIT
        95 × 95       95 × 95
+
 
    TOTAL WIDTH:
    95 + 6 + 95 = 196px
@@ -439,10 +451,10 @@ body {
     grid-template-rows:
         95px 95px;
 
-    /* 第二行左右间距 */
+    /* LEFT / RIGHT */
     column-gap: 6px;
 
-    /* 上下两行间距 */
+    /* TOP / BOTTOM */
     row-gap: 9px;
 
     justify-self: start;
