@@ -419,26 +419,42 @@ body {
 
               ROAD
                 │
+              12px
                 │
               CCTV
                 │
+              12px
                 │
              CONDUIT
 
-   三个图标竖直排列
-   三个外框中心线严格一致
+   使用 FLEX 自动排列
+
+   Road → CCTV = 12px
+   CCTV → Conduit = 12px
+
+   三个图标中心线完全一致
 ======================================== */
 
 .tree-icons.three-icons {
-    position: relative;
-
     width: 196px;
-    height: 310px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 12px;
+
+    position: relative;
 
     justify-self: start;
     align-self: center;
 
-    /* DEBUG */
+    margin: 0;
+    padding: 0;
+
+    /* DEBUG：整个图标区域 */
     outline: 2px dashed purple !important;
 }
 
@@ -448,24 +464,23 @@ body {
 ======================================== */
 
 .three-icons .icon-road {
-    position: absolute;
+    position: static;
 
     width: 95px;
     height: auto;
 
     max-width: none;
 
-    left: 50%;
-    top: 0;
-
     margin: 0;
     padding: 0;
 
-    transform: translateX(-50%);
+    transform: none;
 
     object-fit: contain;
 
-    /* DEBUG */
+    flex: 0 0 auto;
+
+    /* DEBUG：Road 边框 */
     outline: 2px solid green !important;
 }
 
@@ -475,24 +490,23 @@ body {
 ======================================== */
 
 .three-icons .icon-cctv {
-    position: absolute;
+    position: static;
 
     width: 95px;
     height: auto;
 
     max-width: none;
 
-    left: 50%;
-    top: 72.8px;
-
     margin: 0;
     padding: 0;
 
-    transform: translateX(-50%);
+    transform: none;
 
     object-fit: contain;
 
-    /* DEBUG */
+    flex: 0 0 auto;
+
+    /* DEBUG：CCTV 边框 */
     outline: 2px solid blue !important;
 }
 
@@ -502,24 +516,23 @@ body {
 ======================================== */
 
 .three-icons .icon-conduit {
-    position: absolute;
+    position: static;
 
     width: auto;
     height: 95px;
 
     max-width: none;
 
-    left: 50%;
-    top: 181.8px;
-
     margin: 0;
     padding: 0;
 
-    transform: translateX(-50%);
+    transform: none;
 
     object-fit: contain;
 
-    /* DEBUG */
+    flex: 0 0 auto;
+
+    /* DEBUG：Conduit 边框 */
     outline: 2px solid red !important;
 }
 
@@ -552,7 +565,7 @@ body {
 ======================================== */
 
 .tree-icons.two-icons {
-    width: 204px;
+    width: 202px;
     min-height: 95px;
 
     display: flex;
@@ -560,7 +573,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 14px;
+    gap: 12px;
 }
 
 .tree-icons.two-icons img {
@@ -577,7 +590,7 @@ body {
 ======================================== */
 
 .tree-icons.four-icons {
-    width: 204px;
+    width: 202px;
 
     display: grid;
 
@@ -587,8 +600,8 @@ body {
     grid-template-rows:
         95px 95px;
 
-    column-gap: 14px;
-    row-gap: 14px;
+    column-gap: 12px;
+    row-gap: 12px;
 }
 
 .tree-icons.four-icons img {
@@ -658,50 +671,70 @@ body {
     }
 
 
-    /* THREE ICON GROUP */
+    /* ========================================
+       THREE ICONS — MOBILE
+    ======================================== */
 
     .tree-icons.three-icons {
         width: 196px;
-        height: 310px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 12px;
+
+        position: relative;
+
+        margin: 0;
+        padding: 0;
     }
 
 
     /* ROAD */
 
     .three-icons .icon-road {
+        position: static;
+
         width: 95px;
         height: auto;
 
-        left: 50%;
-        top: 0;
+        margin: 0;
+        padding: 0;
 
-        transform: translateX(-50%);
+        transform: none;
     }
 
 
     /* CCTV */
 
     .three-icons .icon-cctv {
+        position: static;
+
         width: 95px;
         height: auto;
 
-        left: 50%;
-        top: 72.8px;
+        margin: 0;
+        padding: 0;
 
-        transform: translateX(-50%);
+        transform: none;
     }
 
 
     /* CONDUIT */
 
     .three-icons .icon-conduit {
+        position: static;
+
         width: auto;
         height: 95px;
 
-        left: 50%;
-        top: 181.8px;
+        margin: 0;
+        padding: 0;
 
-        transform: translateX(-50%);
+        transform: none;
     }
 
 }
