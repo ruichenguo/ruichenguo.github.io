@@ -46,6 +46,7 @@ body {
 
 .hero {
     width: 100%;
+
     background: #dddddd;
 
     padding: 40px var(--side-padding);
@@ -53,22 +54,26 @@ body {
 
 .hero-text {
     width: min(100%, var(--page-width));
+
     margin: 0 auto;
 }
 
 .hero h1 {
     margin: 0 0 8px;
+
     font-size: 38px;
 }
 
 .hero h2 {
     margin: 0 0 8px;
+
     font-size: 26px;
     font-style: italic;
 }
 
 .hero p {
     margin: 0;
+
     font-size: 18px;
 }
 
@@ -120,6 +125,7 @@ body {
     height: 62px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -142,6 +148,7 @@ body {
     height: 90px;
 
     display: flex;
+
     align-items: flex-start;
     justify-content: center;
 
@@ -197,6 +204,7 @@ body {
     margin: 0 0 40px;
 
     text-align: center;
+
     font-size: 30px;
 }
 
@@ -240,6 +248,7 @@ body {
     height: 100px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -384,6 +393,8 @@ body {
 
 /* ========================================
    ALL PROJECT ICONS
+
+   SIZE = 95 × 95px
 ======================================== */
 
 .tree-icons img {
@@ -401,29 +412,26 @@ body {
 
 
 /* ========================================
-   PROJECT 01
-   THREE ICON GRID
+   PROJECT 01 — THREE ICONS
 
-              ROAD
-             95 × 95
+               ROAD
+              95×95
 
-               15px
+                8px
 
        CCTV ← 6px → CONDUIT
-      95 × 95       95 × 95
+       95×95        95×95
+
+   WIDTH:
+   95 + 6 + 95 = 196px
+
+   HEIGHT:
+   95 + 8 + 95 = 198px
 ======================================== */
 
 .tree-icons.three-icons {
-    /*
-       WIDTH:
-       95 + 6 + 95 = 196px
-
-       HEIGHT:
-       95 + 15 + 95 = 205px
-    */
-
     width: 196px;
-    height: 205px;
+    height: 198px;
 
     display: grid;
 
@@ -433,11 +441,11 @@ body {
     grid-template-rows:
         95px 95px;
 
-    /* LEFT / RIGHT ICON GAP */
+    /* LEFT / RIGHT GAP */
     column-gap: 6px;
 
-    /* TOP / BOTTOM ROW GAP */
-    row-gap: 15px;
+    /* TOP / BOTTOM GAP */
+    row-gap: 8px;
 
     justify-self: start;
     align-self: center;
@@ -445,8 +453,7 @@ body {
 
 
 /* ========================================
-   ROAD
-   FIRST ROW — CENTERED
+   ROAD — TOP CENTER
 ======================================== */
 
 .three-icons .icon-road {
@@ -471,8 +478,7 @@ body {
 
 
 /* ========================================
-   CCTV
-   SECOND ROW — LEFT
+   CCTV — BOTTOM LEFT
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -497,8 +503,7 @@ body {
 
 
 /* ========================================
-   CONDUIT
-   SECOND ROW — RIGHT
+   CONDUIT — BOTTOM RIGHT
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -572,7 +577,7 @@ body {
 
 .tree-icons.four-icons {
     width: 196px;
-    height: 205px;
+    height: 198px;
 
     display: grid;
 
@@ -583,7 +588,7 @@ body {
         95px 95px;
 
     column-gap: 6px;
-    row-gap: 15px;
+    row-gap: 8px;
 }
 
 .tree-icons.four-icons img {
@@ -644,7 +649,7 @@ body {
 
     .tree-icons.three-icons {
         width: 196px;
-        height: 205px;
+        height: 198px;
 
         grid-template-columns:
             95px 95px;
@@ -653,11 +658,11 @@ body {
             95px 95px;
 
         column-gap: 6px;
-        row-gap: 15px;
+        row-gap: 8px;
     }
 
 
-    /* ICON SIZE */
+    /* KEEP ICON SIZE */
 
     .tree-icons img {
         width: 95px;
