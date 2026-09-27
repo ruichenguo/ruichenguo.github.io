@@ -417,19 +417,17 @@ body {
 /* ========================================
    PROJECT 01 — THREE ICONS
 
-                   ROAD
-                    |
-                 ≈ 12px
-                    |
-          CCTV             CONDUIT
-                ← 12px →
+                ROAD
+                  │
+                  │
+                  │
+        CCTV           CONDUIT
 
-   Road → CCTV    ≈ 12px
-   Road → Conduit ≈ 12px
-   CCTV ↔ Conduit = 12px
+   第一行中心线 =
+   第二行总长度中心线
 
-   Road moved 6px right for
-   visual center alignment.
+   Vertical gaps ≈ 12px
+   Horizontal gap = 12px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -445,6 +443,19 @@ body {
 
 /* ========================================
    ROAD
+
+   Width = 95px
+
+   Second row total:
+   left edge  = 5.5px
+   right edge ≈ 172.5px
+
+   second-row center ≈ 89px
+
+   Road left:
+   89 - 47.5 = 41.5px
+
+   Therefore Road center ≈ 89px
 ======================================== */
 
 .three-icons .icon-road {
@@ -455,7 +466,7 @@ body {
 
     max-width: none;
 
-    left: 56.5px;
+    left: 41.5px;
     top: 0;
 
     margin: 0;
@@ -469,6 +480,13 @@ body {
 
 /* ========================================
    CCTV
+
+   Width = 95px
+
+   left edge  = 5.5px
+   right edge = 100.5px
+
+   Road → CCTV ≈ 12px
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -493,6 +511,18 @@ body {
 
 /* ========================================
    CONDUIT
+
+   Height = 95px
+   rendered width ≈ 60px
+
+   left edge ≈ 112.5px
+
+   CCTV right edge = 100.5px
+
+   Horizontal gap:
+   112.5 - 100.5 = 12px
+
+   Road → Conduit ≈ 12px
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -656,7 +686,7 @@ body {
         width: 95px;
         height: auto;
 
-        left: 56.5px;
+        left: 41.5px;
         top: 0;
     }
 
