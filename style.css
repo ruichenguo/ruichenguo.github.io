@@ -428,12 +428,10 @@ body {
              CONDUIT
 
    三个图标竖直排列
-   三个中心线完全对齐
-
-   整组向右移动 49.5px
+   三个图标中心线完全对齐
 
    Road / CCTV 右边缘
-   到竖线约 20px
+   到右侧竖线约 10px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -449,16 +447,14 @@ body {
 
     position: relative;
 
-    left: 49.5px;
+    /* 整个图标组向右移动 */
+    left: 59.5px;
 
     justify-self: start;
     align-self: center;
 
     margin: 0;
     padding: 0;
-
-    /* DEBUG：整个图标区域 */
-    outline: 2px dashed purple !important;
 }
 
 
@@ -482,9 +478,6 @@ body {
     object-fit: contain;
 
     flex: 0 0 auto;
-
-    /* DEBUG：Road */
-    outline: 2px solid green !important;
 }
 
 
@@ -508,9 +501,6 @@ body {
     object-fit: contain;
 
     flex: 0 0 auto;
-
-    /* DEBUG：CCTV */
-    outline: 2px solid blue !important;
 }
 
 
@@ -534,9 +524,6 @@ body {
     object-fit: contain;
 
     flex: 0 0 auto;
-
-    /* DEBUG：Conduit */
-    outline: 2px solid red !important;
 }
 
 
@@ -691,7 +678,7 @@ body {
 
         position: relative;
 
-        left: 49.5px;
+        left: 59.5px;
 
         margin: 0;
         padding: 0;
