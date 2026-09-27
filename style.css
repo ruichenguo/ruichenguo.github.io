@@ -427,22 +427,21 @@ body {
    PROJECT 01
    THREE ICON VISUAL LAYOUT
 
-             ROAD
+              ROAD
 
-       CCTV       CONDUIT
 
-   NOTE:
-   SVG files contain transparent padding,
-   so their 95×95 boxes intentionally
-   overlap slightly to reduce the visible
-   black-shape spacing.
+       CCTV        CONDUIT
+
+   SVG files contain transparent padding.
+   Positions below are adjusted for
+   VISUAL spacing.
 ======================================== */
 
 .tree-icons.three-icons {
     position: relative;
 
     width: 198px;
-    height: 170px;
+    height: 180px;
 
     justify-self: start;
     align-self: center;
@@ -479,7 +478,7 @@ body {
     height: 95px;
 
     left: 7px;
-    top: 75px;
+    top: 85px;
 
     object-fit: contain;
 }
@@ -497,7 +496,7 @@ body {
     height: 95px;
 
     left: 96px;
-    top: 75px;
+    top: 85px;
 
     object-fit: contain;
 }
@@ -626,7 +625,7 @@ body {
 
     .tree-icons.three-icons {
         width: 198px;
-        height: 170px;
+        height: 180px;
     }
 
 
