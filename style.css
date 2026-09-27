@@ -417,13 +417,16 @@ body {
 /* ========================================
    PROJECT 01 — THREE ICONS
 
-                 ROAD
+   TEST VERSION
 
-       CCTV  ← 12px →  CONDUIT
+                ROAD
 
-   Bottom pair keeps the same overall
-   horizontal center while the gap is
-   increased to 12px.
+       CCTV        CONDUIT
+
+   CCTV / Conduit CSS gap = 30px
+
+   This is intentionally large so the
+   change should be clearly visible.
 ======================================== */
 
 .tree-icons.three-icons {
@@ -439,9 +442,6 @@ body {
 
 /* ========================================
    ROAD
-
-   width = 95px
-   left = 50.5px
 ======================================== */
 
 .three-icons .icon-road {
@@ -467,11 +467,12 @@ body {
 /* ========================================
    CCTV
 
-   left = 5.5px
+   left = -3.5px
    width = 95px
 
    right edge:
-   5.5 + 95 = 100.5px
+   -3.5 + 95
+   = 91.5px
 ======================================== */
 
 .three-icons .icon-cctv {
@@ -482,7 +483,7 @@ body {
 
     max-width: none;
 
-    left: 5.5px;
+    left: -3.5px;
     top: 86.5px;
 
     margin: 0;
@@ -497,12 +498,11 @@ body {
 /* ========================================
    CONDUIT
 
-   CCTV right edge = 100.5px
+   left = 121.5px
 
-   Conduit left = 112.5px
-
-   Gap:
-   112.5 - 100.5 = 12px
+   gap:
+   121.5 - 91.5
+   = 30px
 ======================================== */
 
 .three-icons .icon-conduit {
@@ -513,7 +513,7 @@ body {
 
     max-width: none;
 
-    left: 112.5px;
+    left: 121.5px;
     top: 68px;
 
     margin: 0;
@@ -553,7 +553,7 @@ body {
 ======================================== */
 
 .tree-icons.two-icons {
-    width: 202px;
+    width: 199px;
     min-height: 95px;
 
     display: flex;
@@ -561,7 +561,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 12px;
+    gap: 9px;
 }
 
 .tree-icons.two-icons img {
@@ -578,7 +578,7 @@ body {
 ======================================== */
 
 .tree-icons.four-icons {
-    width: 202px;
+    width: 199px;
 
     display: grid;
 
@@ -588,7 +588,7 @@ body {
     grid-template-rows:
         95px 95px;
 
-    column-gap: 12px;
+    column-gap: 9px;
     row-gap: 9px;
 }
 
@@ -677,18 +677,18 @@ body {
         width: 95px;
         height: auto;
 
-        left: 5.5px;
+        left: -3.5px;
         top: 86.5px;
     }
 
 
-    /* CONDUIT — 12px GAP */
+    /* CONDUIT — TEST 30px GAP */
 
     .three-icons .icon-conduit {
         width: auto;
         height: 95px;
 
-        left: 112.5px;
+        left: 121.5px;
         top: 68px;
     }
 
