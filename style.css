@@ -415,22 +415,21 @@ body {
                ROAD
               95 × 95
 
-                10px
+                 9px
 
        CCTV ← 6px → CONDUIT
        95 × 95       95 × 95
-
 
    TOTAL WIDTH:
    95 + 6 + 95 = 196px
 
    TOTAL HEIGHT:
-   95 + 10 + 95 = 200px
+   95 + 9 + 95 = 199px
 ======================================== */
 
 .tree-icons.three-icons {
     width: 196px;
-    height: 200px;
+    height: 199px;
 
     display: grid;
 
@@ -440,11 +439,11 @@ body {
     grid-template-rows:
         95px 95px;
 
-    /* CCTV ↔ CONDUIT */
+    /* 第二行左右间距 */
     column-gap: 6px;
 
-    /* ROAD ↕ SECOND ROW */
-    row-gap: 10px;
+    /* 上下两行间距 */
+    row-gap: 9px;
 
     justify-self: start;
     align-self: center;
@@ -576,7 +575,7 @@ body {
 
 .tree-icons.four-icons {
     width: 196px;
-    height: 200px;
+    height: 199px;
 
     display: grid;
 
@@ -587,7 +586,7 @@ body {
         95px 95px;
 
     column-gap: 6px;
-    row-gap: 10px;
+    row-gap: 9px;
 }
 
 .tree-icons.four-icons img {
@@ -648,7 +647,7 @@ body {
 
     .tree-icons.three-icons {
         width: 196px;
-        height: 200px;
+        height: 199px;
 
         grid-template-columns:
             95px 95px;
@@ -657,7 +656,7 @@ body {
             95px 95px;
 
         column-gap: 6px;
-        row-gap: 10px;
+        row-gap: 9px;
     }
 
 
