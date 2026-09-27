@@ -25,22 +25,17 @@
 }
 
 
-
 /* ========================================
    RESET
 ======================================== */
 
 * {
-
     box-sizing: border-box;
-
 }
 
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
 
@@ -55,7 +50,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
 }
-
 
 
 /* ========================================
@@ -111,7 +105,6 @@ body {
 }
 
 
-
 /* ========================================
    MAIN CONTAINER
 ======================================== */
@@ -126,7 +119,6 @@ body {
     margin: 0 auto;
 
 }
-
 
 
 /* ========================================
@@ -158,7 +150,6 @@ body {
 }
 
 
-
 /* ========================================
    PROFILE LABEL
 ======================================== */
@@ -186,7 +177,6 @@ body {
     font-weight: 700;
 
 }
-
 
 
 /* ========================================
@@ -223,7 +213,6 @@ body {
     object-position: center top;
 
 }
-
 
 
 /* ========================================
@@ -265,7 +254,6 @@ body {
 }
 
 
-
 /* ========================================
    PROJECT SECTION
 ======================================== */
@@ -288,9 +276,8 @@ body {
 }
 
 
-
 /* ========================================
-   PROJECT GRID
+   THREE PROJECT COLUMNS
 ======================================== */
 
 .projects-grid {
@@ -305,7 +292,6 @@ body {
     align-items: start;
 
 }
-
 
 
 /* ========================================
@@ -324,7 +310,6 @@ body {
         auto;
 
 }
-
 
 
 /* ========================================
@@ -360,9 +345,8 @@ body {
 }
 
 
-
 /* ========================================
-   CATEGORY
+   PROJECT CATEGORY
 ======================================== */
 
 .project-category {
@@ -371,13 +355,13 @@ body {
 
     height: 60px;
 
+    margin: 0;
+
     display: flex;
 
     align-items: center;
 
     justify-content: center;
-
-    margin: 0;
 
     text-align: center;
 
@@ -388,42 +372,33 @@ body {
 }
 
 
-
 /* ========================================
    PROJECT TREE
+
+   78px = ICON AREA
+   70px = HORIZONTAL BRANCH
 ======================================== */
 
 .project-tree {
 
-    /*
-        ICON COLUMN = 78px
-        BRANCH = 72px
+    --icon-area: 78px;
 
-        The vertical line is placed
-        exactly at x = 78px.
-    */
+    --branch-width: 70px;
 
-    --icon-column: 78px;
-
-    --branch-column: 72px;
-
-    --line-width: 5px;
+    --tree-line-width: 5px;
 
 
     position: relative;
 
     width: 100%;
 
-    margin: 0;
-
     padding: 12px 0;
 
 }
 
 
-
 /* ========================================
-   VERTICAL LINE
+   VERTICAL TREE LINE
 ======================================== */
 
 .project-tree::before {
@@ -432,13 +407,13 @@ body {
 
     position: absolute;
 
-    left: var(--icon-column);
+    left: var(--icon-area);
 
     top: 0;
 
     bottom: 0;
 
-    width: var(--line-width);
+    width: var(--tree-line-width);
 
     background: var(--dark);
 
@@ -449,9 +424,8 @@ body {
 }
 
 
-
 /* ========================================
-   TREE ROW
+   EACH PROJECT ROW
 ======================================== */
 
 .tree-item {
@@ -460,13 +434,13 @@ body {
 
     width: 100%;
 
-    min-height: 118px;
+    height: 118px;
 
     display: grid;
 
     grid-template-columns:
-        var(--icon-column)
-        var(--branch-column)
+        var(--icon-area)
+        var(--branch-width)
         minmax(0, 1fr);
 
     align-items: center;
@@ -474,9 +448,8 @@ body {
 }
 
 
-
 /* ========================================
-   ICON AREA
+   ICON
 ======================================== */
 
 .tree-icon {
@@ -493,16 +466,17 @@ body {
 
     justify-content: center;
 
+    overflow: visible;
+
     color: var(--dark);
 
-    font-size: 24px;
+    font-size: 22px;
 
 }
 
 
-
 /* ========================================
-   SVG ICON
+   ACTUAL SVG IMAGE
 ======================================== */
 
 .tree-icon img {
@@ -513,14 +487,17 @@ body {
 
     height: 68px;
 
+    max-width: 68px;
+
+    max-height: 68px;
+
     object-fit: contain;
 
 }
 
 
-
 /* ========================================
-   HORIZONTAL LINE
+   HORIZONTAL BRANCH
 ======================================== */
 
 .tree-branch {
@@ -538,7 +515,6 @@ body {
     z-index: 2;
 
 }
-
 
 
 /* ========================================
@@ -560,7 +536,6 @@ body {
     line-height: 1.35;
 
 }
-
 
 
 /* ========================================
