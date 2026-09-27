@@ -291,13 +291,14 @@ body {
 /* ========================================
    PROJECT TREE
 
-   LEFT = ICON AREA
-   CENTER = BRANCH
-   RIGHT = PROJECT TEXT
+   ICON SIZE = 95px
+   ICON GAP  = 8px
+
+   95 + 8 + 95 = 198px
 ======================================== */
 
 .project-tree {
-    --icon-zone: 220px;
+    --icon-zone: 215px;
     --branch-width: 75px;
     --tree-width: 5px;
 
@@ -428,27 +429,24 @@ body {
 /* ========================================
    THREE ICON LAYOUT
 
-             ROAD
-             95px
+              ROAD
+             95 × 95
 
-             15px
+                8px
 
-       CCTV  15px  CONDUIT
-       95px        95px
+       CCTV  ← 8px →  CONDUIT
+      95 × 95          95 × 95
 
 
-   TOTAL WIDTH:
-   95 + 15 + 95 = 205px
-
-   TOTAL HEIGHT:
-   95 + 15 + 95 = 205px
+   TOTAL WIDTH  = 198px
+   TOTAL HEIGHT = 198px
 ======================================== */
 
 .tree-icons.three-icons {
     position: relative;
 
-    width: 205px;
-    height: 205px;
+    width: 198px;
+    height: 198px;
 
     justify-self: start;
     align-self: center;
@@ -467,12 +465,11 @@ body {
     height: 95px;
 
     /*
-       Center of 205px area:
-
-       (205 - 95) / 2 = 55px
+       (198 - 95) / 2
+       = 51.5px
     */
 
-    left: 55px;
+    left: 51.5px;
     top: 0;
 
     object-fit: contain;
@@ -493,12 +490,10 @@ body {
     left: 0;
 
     /*
-       95px first row
-       + 15px gap
-       = 110px
+       95 + 8 = 103px
     */
 
-    top: 110px;
+    top: 103px;
 
     object-fit: contain;
 }
@@ -516,14 +511,11 @@ body {
     height: 95px;
 
     /*
-       CCTV width 95
-       + 15px gap
-       = 110px
+       95 + 8 = 103px
     */
 
-    left: 110px;
-
-    top: 110px;
+    left: 103px;
+    top: 103px;
 
     object-fit: contain;
 }
@@ -531,10 +523,12 @@ body {
 
 /* ========================================
    ONE ICON
+
+   95 × 95
 ======================================== */
 
 .tree-icons.one-icon {
-    width: 205px;
+    width: 198px;
     height: 95px;
 
     display: flex;
@@ -551,17 +545,20 @@ body {
 
 /* ========================================
    TWO ICONS
+
+   95 + 8 + 95 = 198px
 ======================================== */
 
 .tree-icons.two-icons {
-    width: 205px;
+    width: 198px;
     height: 95px;
 
     display: grid;
 
-    grid-template-columns: 95px 95px;
+    grid-template-columns:
+        95px 95px;
 
-    column-gap: 15px;
+    column-gap: 8px;
 
     align-items: center;
 }
@@ -575,16 +572,16 @@ body {
 /* ========================================
    FOUR ICONS
 
-   95px  15px  95px
+   95   8   95
 
-   15px vertical gap
+        8
 
-   95px  15px  95px
+   95   8   95
 ======================================== */
 
 .tree-icons.four-icons {
-    width: 205px;
-    height: 205px;
+    width: 198px;
+    height: 198px;
 
     display: grid;
 
@@ -594,8 +591,8 @@ body {
     grid-template-rows:
         95px 95px;
 
-    column-gap: 15px;
-    row-gap: 15px;
+    column-gap: 8px;
+    row-gap: 8px;
 }
 
 .tree-icons.four-icons img {
@@ -648,16 +645,17 @@ body {
     /* TREE */
 
     .project-tree {
-        --icon-zone: 220px;
+        --icon-zone: 215px;
         --branch-width: 65px;
     }
 
 
-    /* KEEP ICON SIZE EXACTLY 95px */
+    /* KEEP ICON SIZE = 95px
+       KEEP GAP = 8px */
 
     .tree-icons.three-icons {
-        width: 205px;
-        height: 205px;
+        width: 198px;
+        height: 198px;
     }
 
     .tree-icons img {
