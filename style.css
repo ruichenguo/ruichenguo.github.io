@@ -1,656 +1,86 @@
 /* ========================================
-   GLOBAL DESIGN SYSTEM
-======================================== */
-
-:root {
-
-    --page-width: 1200px;
-
-    --side-padding: 48px;
-
-    --column-gap: 48px;
-
-    --label-width: 190px;
-
-    --logo-width: 90px;
-
-    --dark: #555555;
-
-    --orange: #ff6600;
-
-    --text: #444444;
-
-    --background: #ffffff;
-
-}
-
-
-/* ========================================
-   RESET
-======================================== */
-
-* {
-
-    box-sizing: border-box;
-
-}
-
-
-html {
-
-    scroll-behavior: smooth;
-
-}
-
-
-body {
-
-    margin: 0;
-
-    background: var(--background);
-
-    color: var(--text);
-
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-
-/* ========================================
-   HEADER
-======================================== */
-
-.hero {
-
-    width: 100%;
-
-    background: #dddddd;
-
-    padding: 40px var(--side-padding);
-
-}
-
-
-.hero-text {
-
-    width: min(100%, var(--page-width));
-
-    margin: 0 auto;
-
-}
-
-
-.hero h1 {
-
-    margin: 0 0 8px;
-
-    font-size: 38px;
-
-}
-
-
-.hero h2 {
-
-    margin: 0 0 8px;
-
-    font-size: 26px;
-
-    font-style: italic;
-
-}
-
-
-.hero p {
-
-    margin: 0;
-
-    font-size: 18px;
-
-}
-
-
-/* ========================================
-   MAIN CONTAINER
-======================================== */
-
-.container {
-
-    width: min(
-        calc(100% - (var(--side-padding) * 2)),
-        var(--page-width)
-    );
-
-    margin: 0 auto;
-
-}
-
-
-/* ========================================
-   PROFILE
-======================================== */
-
-.profile {
-
-    padding: 48px 0;
-
-}
-
-
-.profile-row {
-
-    display: grid;
-
-    grid-template-columns:
-        var(--label-width)
-        var(--logo-width)
-        minmax(0, 1fr);
-
-    column-gap: 40px;
-
-    align-items: start;
-
-    margin-bottom: 48px;
-
-}
-
-
-/* ========================================
-   PROFILE LABEL
-======================================== */
-
-.section-label {
-
-    width: 190px;
-
-    height: 62px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: var(--dark);
-
-    color: #ffffff;
-
-    border-radius: 8px;
-
-    font-size: 22px;
-
-    font-weight: 700;
-
-}
-
-
-/* ========================================
-   PROFILE LOGO
-======================================== */
-
-.section-logo {
-
-    width: 90px;
-
-    height: 90px;
-
-    display: flex;
-
-    align-items: flex-start;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-}
-
-
-.section-logo img {
-
-    display: block;
-
-    width: 90px;
-
-    height: 90px;
-
-    object-fit: contain;
-
-    object-position: center top;
-
-}
-
-
-/* ========================================
-   PROFILE TEXT
-======================================== */
-
-.section-content {
-
-    margin: 0;
-
-    padding: 0;
-
-}
-
-
-.section-content h3 {
-
-    margin: 0 0 6px 0;
-
-    padding: 0;
-
-    font-size: 21px;
-
-    line-height: 1;
-
-}
-
-
-.section-content p {
-
-    margin: 6px 0 0 0;
-
-    padding: 0;
-
-    font-size: 17px;
-
-    line-height: 1.25;
-
-}
-
-
-/* ========================================
-   PROJECT SECTION
-======================================== */
-
-.projects {
-
-    padding: 24px 0 80px;
-
-}
-
-
-.projects-heading {
-
-    margin: 0 0 40px;
-
-    text-align: center;
-
-    font-size: 30px;
-
-}
-
-
-/* ========================================
-   THREE PROJECT COLUMNS
-======================================== */
-
-.projects-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    column-gap: var(--column-gap);
-
-    align-items: start;
-
-}
-
-
-/* ========================================
-   PROJECT COLUMN
-======================================== */
-
-.project-column {
-
-    width: 100%;
-
-    display: grid;
-
-    grid-template-rows:
-        110px
-        60px
-        auto;
-
-}
-
-
-/* ========================================
-   NUMBER BOX
-======================================== */
-
-.project-count {
-
-    width: 190px;
-
-    height: 100px;
-
-    justify-self: center;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: var(--dark);
-
-    color: var(--orange);
-
-    border-radius: 16px;
-
-    font-size: 68px;
-
-    font-weight: 700;
-
-    font-style: italic;
-
-}
-
-
-/* ========================================
-   PROJECT CATEGORY
-======================================== */
-
-.project-category {
-
-    width: 100%;
-
-    height: 60px;
-
-    margin: 0;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    font-size: 25px;
-
-    font-weight: 700;
-
-}
-
-
-/* ========================================
    PROJECT TREE
 ======================================== */
 
 .project-tree {
 
-    /*
-       Larger icon area.
-
-       Icons: 130px
-       Branch: 70px
-    */
-
-    --icon-area: 130px;
-
-    --branch-width: 70px;
-
+    --icon-area: 210px;
+    --branch-width: 75px;
     --tree-line-width: 5px;
 
-
     position: relative;
-
     width: 100%;
-
     padding: 12px 0;
-
 }
 
 
 /* ========================================
-   VERTICAL TREE LINE
-======================================== */
-
-.project-tree::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: var(--icon-area);
-
-    top: 0;
-
-    bottom: 0;
-
-    width: var(--tree-line-width);
-
-    background: var(--dark);
-
-    border-radius: 3px;
-
-    z-index: 1;
-
-}
-
-
-/* ========================================
-   EACH PROJECT ROW
-======================================== */
-
-.tree-item {
-
-    position: relative;
-
-    width: 100%;
-
-    min-height: 165px;
-
-    display: grid;
-
-    grid-template-columns:
-        var(--icon-area)
-        var(--branch-width)
-        minmax(0, 1fr);
-
-    align-items: center;
-
-}
-
-
-/* ========================================
-   ICON GROUP
+   ICON AREA
 ======================================== */
 
 .tree-icons {
 
-    width: 120px;
-
-    height: 120px;
-
-    justify-self: start;
-
-    align-self: center;
-
     position: relative;
 
+    width: 195px;
+    height: 215px;
+
+    justify-self: start;
+    align-self: center;
 }
 
 
 /* ========================================
-   DEFAULT ICON SIZE
-======================================== */
-
-.tree-icons img {
-
-    display: block;
-
-    width: 52px;
-
-    height: 52px;
-
-    object-fit: contain;
-
-}
-
-
-/* ========================================
-   PROJECT WITH EXACTLY THREE ICONS
-
-            ROAD
-       CCTV     CONDUIT
+   ROAD - TOP CENTER
 ======================================== */
 
 .three-icons .icon-top {
 
     position: absolute;
 
-    width: 58px;
+    width: 110px;
+    height: 110px;
 
-    height: 58px;
-
-    left: 31px;
-
+    left: 50%;
     top: 0;
 
+    transform: translateX(-50%);
+
+    object-fit: contain;
 }
 
+
+/* ========================================
+   CCTV - BOTTOM LEFT
+======================================== */
 
 .three-icons .icon-bottom-left {
 
     position: absolute;
 
-    width: 58px;
-
-    height: 58px;
+    width: 110px;
+    height: 110px;
 
     left: 0;
-
     bottom: 0;
 
+    object-fit: contain;
 }
 
+
+/* ========================================
+   CONDUIT - BOTTOM RIGHT
+======================================== */
 
 .three-icons .icon-bottom-right {
 
     position: absolute;
 
-    width: 58px;
-
-    height: 58px;
+    width: 110px;
+    height: 110px;
 
     right: 0;
-
     bottom: 0;
 
-}
-
-
-/* ========================================
-   SINGLE ICON
-======================================== */
-
-.tree-icons img:only-child {
-
-    width: 72px;
-
-    height: 72px;
-
-    position: absolute;
-
-    left: 24px;
-
-    top: 24px;
-
-}
-
-
-/* ========================================
-   HORIZONTAL BRANCH
-======================================== */
-
-.tree-branch {
-
-    width: 100%;
-
-    height: 5px;
-
-    background: var(--dark);
-
-    border-radius: 0 4px 4px 0;
-
-    position: relative;
-
-    z-index: 2;
-
-}
-
-
-/* ========================================
-   PROJECT TEXT
-======================================== */
-
-.tree-text {
-
-    padding-left: 16px;
-
-    text-align: left;
-
-    color: var(--dark);
-
-    font-size: 17px;
-
-    font-weight: 700;
-
-    line-height: 1.35;
-
-}
-
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 800px) {
-
-    :root {
-
-        --side-padding: 20px;
-
-    }
-
-
-    .profile-row {
-
-        grid-template-columns: 1fr;
-
-        row-gap: 18px;
-
-    }
-
-
-    .section-logo {
-
-        justify-self: start;
-
-    }
-
-
-    .projects-grid {
-
-        grid-template-columns: 1fr;
-
-        row-gap: 60px;
-
-    }
-
-
-    .project-column {
-
-        width: 100%;
-
-        max-width: 460px;
-
-        margin: 0 auto;
-
-    }
-
+    object-fit: contain;
 }
