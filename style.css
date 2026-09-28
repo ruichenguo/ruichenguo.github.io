@@ -100,6 +100,11 @@ body {
     padding: 48px 0;
 }
 
+
+/* ========================================
+   PROFILE ROW
+======================================== */
+
 .profile-row {
     display: grid;
 
@@ -143,7 +148,12 @@ body {
 
 
 /* ========================================
-   PROFILE LOGO
+   PROFILE LOGO CONTAINER
+
+   所有 Logo 的容器：
+   90px × 90px
+
+   顶部与灰色标签顶部对齐
 ======================================== */
 
 .section-logo {
@@ -159,6 +169,8 @@ body {
     justify-content: center;
 
     overflow: hidden;
+
+    align-self: start;
 }
 
 
@@ -177,6 +189,60 @@ body {
 
     object-fit: contain;
     object-position: center top;
+}
+
+
+/* ========================================
+   UTK LOGO
+======================================== */
+
+.section-logo .logo-utk {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+    object-position: center top;
+}
+
+
+/* ========================================
+   NVBPELS LOGO
+======================================== */
+
+.section-logo .logo-nvbpe {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+    object-position: center top;
+}
+
+
+/* ========================================
+   AECOM LOGO
+
+   绿色方块整体仍然：
+   90px × 90px
+
+   不再使用 translateY，
+   因此顶部直接与 Experience
+   灰色框顶部对齐。
+
+   白色 AECOM 字母大小
+   应在 AECOM.svg 内部调整。
+======================================== */
+
+.section-logo .logo-aecom {
+    width: 90px;
+    height: 90px;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: contain;
+    object-position: center top;
+
+    transform: none;
 }
 
 
@@ -451,7 +517,6 @@ body {
 
     position: relative;
 
-    /* Road / CCTV 到竖线约 15px */
     left: 54.5px;
 
     justify-self: start;
@@ -621,7 +686,9 @@ body {
     }
 
 
-    /* PROFILE */
+    /* ========================================
+       PROFILE
+    ======================================== */
 
     .profile-row {
         grid-template-columns: 1fr;
@@ -634,7 +701,9 @@ body {
     }
 
 
-    /* PROJECTS */
+    /* ========================================
+       PROJECTS
+    ======================================== */
 
     .projects-grid {
         grid-template-columns: 1fr;
@@ -650,7 +719,9 @@ body {
     }
 
 
-    /* PROJECT TREE */
+    /* ========================================
+       PROJECT TREE
+    ======================================== */
 
     .project-tree {
         --icon-zone: 215px;
@@ -658,7 +729,9 @@ body {
     }
 
 
-    /* PROJECT ROW */
+    /* ========================================
+       PROJECT ROW
+    ======================================== */
 
     .tree-item {
         min-height: 330px;
@@ -682,7 +755,6 @@ body {
 
         position: relative;
 
-        /* Road / CCTV 到竖线约 15px */
         left: 54.5px;
 
         margin: 0;
@@ -690,7 +762,9 @@ body {
     }
 
 
-    /* ROAD */
+    /* ========================================
+       ROAD — MOBILE
+    ======================================== */
 
     .three-icons .icon-road {
         position: static;
@@ -705,7 +779,9 @@ body {
     }
 
 
-    /* CCTV */
+    /* ========================================
+       CCTV — MOBILE
+    ======================================== */
 
     .three-icons .icon-cctv {
         position: static;
@@ -720,7 +796,9 @@ body {
     }
 
 
-    /* CONDUIT */
+    /* ========================================
+       CONDUIT — MOBILE
+    ======================================== */
 
     .three-icons .icon-conduit {
         position: static;
