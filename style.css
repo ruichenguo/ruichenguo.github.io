@@ -161,6 +161,11 @@ body {
     overflow: hidden;
 }
 
+
+/* ========================================
+   PROFILE LOGO IMAGE
+======================================== */
+
 .section-logo img {
     display: block;
 
@@ -446,7 +451,7 @@ body {
 
     position: relative;
 
-    /* Road / CCTV → 竖线约 15px */
+    /* Road / CCTV 到竖线约 15px */
     left: 54.5px;
 
     justify-self: start;
@@ -677,7 +682,7 @@ body {
 
         position: relative;
 
-        /* Road / CCTV → 竖线约 15px */
+        /* Road / CCTV 到竖线约 15px */
         left: 54.5px;
 
         margin: 0;
@@ -729,24 +734,4 @@ body {
         transform: none;
     }
 
-}.section-logo {
-    width: 90px;
-    height: 90px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: visible;
-}
-
-.section-logo img {
-    display: block;
-
-    width: 90px;
-    height: 90px;
-
-    object-fit: contain;
-
-    background: #eeeeee;
 }
