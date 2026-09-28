@@ -10,7 +10,7 @@
 
     --label-width: 190px;
 
-    /* 三个 Profile Logo 统一 150px */
+    /* Logo column */
     --logo-width: 150px;
 
     --dark: #555555;
@@ -117,11 +117,6 @@ body {
 
     column-gap: 40px;
 
-    /*
-       关键：
-       灰色框、Logo、右侧文字
-       全部从同一个顶部开始
-    */
     align-items: start;
 
     margin-bottom: 48px;
@@ -158,15 +153,6 @@ body {
 
 /* ========================================
    PROFILE LOGO CONTAINER
-
-   UTK
-   NVBPELS
-   AECOM
-
-   全部统一：
-   150 × 150px
-
-   顶部全部与左边灰色框顶部对齐
 ======================================== */
 
 .section-logo {
@@ -188,24 +174,17 @@ body {
 
 
 /* ========================================
-   ALL PROFILE LOGOS
+   GENERAL PROFILE LOGO
 ======================================== */
 
 .section-logo img {
     display: block;
-
-    width: 150px;
-    height: 150px;
-
-    max-width: none;
 
     margin: 0;
     padding: 0;
 
     object-fit: contain;
     object-position: center top;
-
-    transform: none;
 }
 
 
@@ -216,6 +195,8 @@ body {
 .section-logo .logo-utk {
     width: 150px;
     height: 150px;
+
+    max-width: none;
 
     object-fit: contain;
     object-position: center top;
@@ -232,6 +213,8 @@ body {
     width: 150px;
     height: 150px;
 
+    max-width: none;
+
     object-fit: contain;
     object-position: center top;
 
@@ -242,16 +225,23 @@ body {
 /* ========================================
    AECOM LOGO
 
-   与另外两个完全相同：
-   150 × 150px
+   SVG 已经裁掉多余画布。
 
-   不向上/下移动
-   不使用 translate
+   绿色方块实际显示尺寸：
+   95px × 95px
+
+   顶部与 Experience 灰框顶部对齐。
+   水平方向位于 150px Logo 栏正中央。
 ======================================== */
 
 .section-logo .logo-aecom {
-    width: 150px;
-    height: 150px;
+    width: 95px;
+    height: 95px;
+
+    max-width: none;
+
+    margin: 0;
+    padding: 0;
 
     object-fit: contain;
     object-position: center top;
@@ -514,10 +504,7 @@ body {
                 │
              CONDUIT
 
-   三个图标中心线完全对齐
-
-   Road / CCTV 右边缘
-   到右侧竖线约 15px
+   Road / CCTV 到竖线约 15px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -717,9 +704,15 @@ body {
         justify-self: start;
     }
 
-    .section-logo img {
+    .section-logo .logo-utk,
+    .section-logo .logo-nvbpe {
         width: 150px;
         height: 150px;
+    }
+
+    .section-logo .logo-aecom {
+        width: 95px;
+        height: 95px;
     }
 
 
