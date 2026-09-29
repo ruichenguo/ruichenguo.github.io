@@ -10,7 +10,7 @@
 
     --label-width: 190px;
 
-    /* 三个 Profile Logo 统一为 105px */
+    /* Profile Logo */
     --logo-width: 105px;
 
     --dark: #555555;
@@ -153,9 +153,6 @@ body {
 
 /* ========================================
    PROFILE LOGO CONTAINER
-
-   UTK / NVBPELS / AECOM
-   全部统一为 105 × 105px
 ======================================== */
 
 .section-logo {
@@ -199,7 +196,7 @@ body {
 
 
 /* ========================================
-   UTK LOGO
+   UTK
 ======================================== */
 
 .section-logo .logo-utk {
@@ -219,7 +216,7 @@ body {
 
 
 /* ========================================
-   NVBPELS LOGO
+   NVBPELS
 ======================================== */
 
 .section-logo .logo-nvbpe {
@@ -239,7 +236,7 @@ body {
 
 
 /* ========================================
-   AECOM LOGO
+   AECOM
 ======================================== */
 
 .section-logo .logo-aecom {
@@ -486,7 +483,7 @@ body {
 
 
 /* ========================================
-   GENERAL ICON RULE
+   GENERAL ICON
 ======================================== */
 
 .tree-icons img {
@@ -500,20 +497,11 @@ body {
 
 
 /* ========================================
-   PROJECT 01 — THREE ICONS
+   PROJECT 01
+   ROAD + CCTV + CONDUIT
 
-              ROAD
-                │
-              12px
-                │
-              CCTV
-                │
-              12px
-                │
-             CONDUIT
-
-   三个中心线对齐
-   Road / CCTV 到竖线约 15px
+   图标之间：12px
+   图标右侧到竖线：约15px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -539,9 +527,7 @@ body {
 }
 
 
-/* ========================================
-   ROAD
-======================================== */
+/* ROAD */
 
 .three-icons .icon-road {
     position: static;
@@ -562,9 +548,7 @@ body {
 }
 
 
-/* ========================================
-   CCTV
-======================================== */
+/* CCTV */
 
 .three-icons .icon-cctv {
     position: static;
@@ -585,9 +569,7 @@ body {
 }
 
 
-/* ========================================
-   CONDUIT
-======================================== */
+/* CONDUIT */
 
 .three-icons .icon-conduit {
     position: static;
@@ -605,6 +587,57 @@ body {
     object-fit: contain;
 
     flex: 0 0 auto;
+}
+
+
+/* ========================================
+   PROJECT 02 — POLE
+
+   Pole 1.svg
+
+   图标框：
+   95 × 95px
+
+   与第二条横线垂直居中
+
+   图标右边缘距离竖线：
+   15px
+======================================== */
+
+.tree-icons.pole-icon {
+    grid-column: 1;
+
+    width: 95px;
+    height: 95px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    justify-self: end;
+    align-self: center;
+
+    margin: 0 15px 0 0;
+    padding: 0;
+}
+
+.tree-icons.pole-icon img {
+    display: block;
+
+    width: 95px;
+    height: 95px;
+
+    max-width: none;
+    max-height: none;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: contain;
+    object-position: center;
+
+    transform: none;
 }
 
 
@@ -699,9 +732,7 @@ body {
     }
 
 
-    /* ========================================
-       PROFILE
-    ======================================== */
+    /* PROFILE */
 
     .profile-row {
         grid-template-columns: 1fr;
@@ -725,9 +756,7 @@ body {
     }
 
 
-    /* ========================================
-       PROJECTS
-    ======================================== */
+    /* PROJECTS */
 
     .projects-grid {
         grid-template-columns: 1fr;
@@ -743,9 +772,7 @@ body {
     }
 
 
-    /* ========================================
-       PROJECT TREE
-    ======================================== */
+    /* PROJECT TREE */
 
     .project-tree {
         --icon-zone: 215px;
@@ -753,18 +780,14 @@ body {
     }
 
 
-    /* ========================================
-       PROJECT ROW
-    ======================================== */
+    /* PROJECT ROW */
 
     .tree-item {
         min-height: 330px;
     }
 
 
-    /* ========================================
-       THREE ICONS
-    ======================================== */
+    /* PROJECT 01 */
 
     .tree-icons.three-icons {
         width: 196px;
@@ -828,6 +851,26 @@ body {
         padding: 0;
 
         transform: none;
+    }
+
+
+    /* PROJECT 02 — POLE */
+
+    .tree-icons.pole-icon {
+        width: 95px;
+        height: 95px;
+
+        justify-self: end;
+        align-self: center;
+
+        margin-right: 15px;
+    }
+
+    .tree-icons.pole-icon img {
+        width: 95px;
+        height: 95px;
+
+        object-fit: contain;
     }
 
 }
