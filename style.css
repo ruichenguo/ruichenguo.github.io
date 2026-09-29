@@ -10,7 +10,7 @@
 
     --label-width: 190px;
 
-    /* Profile Logo：全部 105 × 105 */
+    /* 所有 Profile Logo */
     --logo-width: 105px;
 
     --dark: #555555;
@@ -104,7 +104,10 @@ body {
 
 
 /* ========================================
-   PROFILE ROW
+   NORMAL PROFILE ROW
+
+   Education
+   Licenses
 ======================================== */
 
 .profile-row {
@@ -153,13 +156,6 @@ body {
 
 /* ========================================
    PROFILE LOGO CONTAINER
-
-   UTK
-   NVBPELS
-   AECOM
-   CEC
-
-   全部 105 × 105
 ======================================== */
 
 .section-logo {
@@ -218,7 +214,6 @@ body {
     padding: 0;
 
     object-fit: contain;
-    object-position: center top;
 
     transform: none;
 }
@@ -239,7 +234,6 @@ body {
     padding: 0;
 
     object-fit: contain;
-    object-position: center top;
 
     transform: none;
 }
@@ -260,7 +254,6 @@ body {
     padding: 0;
 
     object-fit: contain;
-    object-position: center top;
 
     transform: none;
 }
@@ -281,7 +274,6 @@ body {
     padding: 0;
 
     object-fit: contain;
-    object-position: center top;
 
     transform: none;
 }
@@ -312,6 +304,63 @@ body {
 
     font-size: 17px;
     line-height: 1.25;
+}
+
+
+/* ========================================
+   EXPERIENCE
+
+   一个 Experience 灰色框
+   对应：
+   1. AECOM
+   2. CEC
+======================================== */
+
+.profile-row.experience-row {
+    grid-template-columns:
+        var(--label-width)
+        minmax(0, 1fr);
+
+    column-gap: 40px;
+
+    align-items: start;
+
+    margin-bottom: 48px;
+}
+
+
+/* ========================================
+   EXPERIENCE LIST
+======================================== */
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 48px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ========================================
+   EACH EXPERIENCE ENTRY
+======================================== */
+
+.experience-entry {
+    display: grid;
+
+    grid-template-columns:
+        var(--logo-width)
+        minmax(0, 1fr);
+
+    column-gap: 40px;
+
+    align-items: start;
+
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -535,8 +584,8 @@ body {
    CCTV
    CONDUIT
 
-   12px 间距
-   距离竖线约 15px
+   图标间距：12px
+   到竖线约：15px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -635,8 +684,11 @@ body {
    PROJECT 02 — POLE
 
    95 × 95px
-   与 Project 02 横线中心对齐
-   右边缘距离竖线 15px
+
+   与第二条横线中心对齐
+
+   距离竖线：
+   15px
 ======================================== */
 
 .tree-icons.pole-icon {
@@ -777,12 +829,14 @@ body {
         row-gap: 18px;
     }
 
+
     .section-logo {
         width: 105px;
         height: 105px;
 
         justify-self: start;
     }
+
 
     .section-logo img,
     .section-logo .logo-utk,
@@ -795,6 +849,31 @@ body {
 
 
     /* ========================================
+       EXPERIENCE — MOBILE
+    ======================================== */
+
+    .profile-row.experience-row {
+        grid-template-columns: 1fr;
+
+        row-gap: 18px;
+    }
+
+
+    .experience-list {
+        gap: 48px;
+    }
+
+
+    .experience-entry {
+        grid-template-columns:
+            105px
+            minmax(0, 1fr);
+
+        column-gap: 30px;
+    }
+
+
+    /* ========================================
        PROJECTS
     ======================================== */
 
@@ -803,6 +882,7 @@ body {
 
         row-gap: 70px;
     }
+
 
     .project-column {
         width: 100%;
@@ -913,6 +993,7 @@ body {
 
         margin-right: 15px;
     }
+
 
     .tree-icons.pole-icon img {
         width: 95px;
