@@ -105,9 +105,6 @@ body {
 
 /* ========================================
    NORMAL PROFILE ROW
-
-   Education
-   Licenses
 ======================================== */
 
 .profile-row {
@@ -193,7 +190,7 @@ body {
     padding: 0;
 
     object-fit: contain;
-    object-position: center top;
+    object-position: center;
 
     transform: none;
 }
@@ -214,6 +211,7 @@ body {
     padding: 0;
 
     object-fit: contain;
+    object-position: center;
 
     transform: none;
 }
@@ -234,6 +232,7 @@ body {
     padding: 0;
 
     object-fit: contain;
+    object-position: center;
 
     transform: none;
 }
@@ -254,6 +253,7 @@ body {
     padding: 0;
 
     object-fit: contain;
+    object-position: center;
 
     transform: none;
 }
@@ -274,6 +274,7 @@ body {
     padding: 0;
 
     object-fit: contain;
+    object-position: center;
 
     transform: none;
 }
@@ -286,6 +287,8 @@ body {
 .section-content {
     margin: 0;
     padding: 0;
+
+    min-width: 0;
 
     align-self: start;
 }
@@ -311,14 +314,18 @@ body {
    EXPERIENCE
 
    一个 Experience 灰色框
-   对应：
-   1. AECOM
-   2. CEC
+
+   AECOM
+   CEC
 ======================================== */
 
 .profile-row.experience-row {
+    display: grid;
+
+    /* 与 Education / Licenses 完全相同 */
     grid-template-columns:
         var(--label-width)
+        var(--logo-width)
         minmax(0, 1fr);
 
     column-gap: 40px;
@@ -331,9 +338,16 @@ body {
 
 /* ========================================
    EXPERIENCE LIST
+
+   从第 2 列 Logo 开始
+   一直占到第 3 列文字区域
 ======================================== */
 
 .experience-list {
+    grid-column: 2 / 4;
+
+    width: 100%;
+
     display: flex;
     flex-direction: column;
 
@@ -341,14 +355,24 @@ body {
 
     margin: 0;
     padding: 0;
+
+    min-width: 0;
 }
 
 
 /* ========================================
    EACH EXPERIENCE ENTRY
+
+   105px Logo
+   +
+   40px Gap
+   +
+   Text
 ======================================== */
 
 .experience-entry {
+    width: 100%;
+
     display: grid;
 
     grid-template-columns:
@@ -361,6 +385,72 @@ body {
 
     margin: 0;
     padding: 0;
+
+    min-width: 0;
+}
+
+
+/* ========================================
+   EXPERIENCE LOGO
+======================================== */
+
+.experience-entry .section-logo {
+    grid-column: 1;
+
+    width: 105px;
+    height: 105px;
+
+    margin: 0;
+    padding: 0;
+
+    justify-self: start;
+    align-self: start;
+}
+
+
+/* ========================================
+   EXPERIENCE TEXT
+======================================== */
+
+.experience-entry .section-content {
+    grid-column: 2;
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    justify-self: stretch;
+    align-self: start;
+}
+
+
+/* ========================================
+   EXPERIENCE TITLE
+======================================== */
+
+.experience-entry .section-content h3 {
+    margin: 0 0 6px 0;
+    padding: 0;
+
+    font-size: 21px;
+    line-height: 1;
+
+    white-space: normal;
+}
+
+
+/* ========================================
+   EXPERIENCE DESCRIPTION
+======================================== */
+
+.experience-entry .section-content p {
+    margin: 6px 0 0 0;
+    padding: 0;
+
+    font-size: 17px;
+    line-height: 1.25;
 }
 
 
@@ -584,8 +674,8 @@ body {
    CCTV
    CONDUIT
 
-   图标间距：12px
-   到竖线约：15px
+   Gap = 12px
+   Distance to vertical line ≈ 15px
 ======================================== */
 
 .tree-icons.three-icons {
@@ -684,11 +774,8 @@ body {
    PROJECT 02 — POLE
 
    95 × 95px
-
    与第二条横线中心对齐
-
-   距离竖线：
-   15px
+   距离竖线 15px
 ======================================== */
 
 .tree-icons.pole-icon {
@@ -820,7 +907,7 @@ body {
 
 
     /* ========================================
-       PROFILE
+       NORMAL PROFILE
     ======================================== */
 
     .profile-row {
@@ -860,11 +947,17 @@ body {
 
 
     .experience-list {
+        grid-column: 1;
+
+        width: 100%;
+
         gap: 48px;
     }
 
 
     .experience-entry {
+        width: 100%;
+
         grid-template-columns:
             105px
             minmax(0, 1fr);
