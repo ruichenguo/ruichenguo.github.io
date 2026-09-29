@@ -9,8 +9,6 @@
     --column-gap: 48px;
 
     --label-width: 190px;
-
-    /* 所有 Profile Logo */
     --logo-width: 105px;
 
     --dark: #555555;
@@ -204,37 +202,21 @@ body {
     width: 105px;
     height: 105px;
 
-    max-width: none;
-    max-height: none;
-
-    margin: 0;
-    padding: 0;
-
     object-fit: contain;
     object-position: center;
-
-    transform: none;
 }
 
 
 /* ========================================
-   NVBPELS LOGO
+   NEVADA STATE SEAL
 ======================================== */
 
 .section-logo .logo-nvbpe {
     width: 105px;
     height: 105px;
 
-    max-width: none;
-    max-height: none;
-
-    margin: 0;
-    padding: 0;
-
     object-fit: contain;
     object-position: center;
-
-    transform: none;
 }
 
 
@@ -246,16 +228,8 @@ body {
     width: 105px;
     height: 105px;
 
-    max-width: none;
-    max-height: none;
-
-    margin: 0;
-    padding: 0;
-
     object-fit: contain;
     object-position: center;
-
-    transform: none;
 }
 
 
@@ -267,16 +241,8 @@ body {
     width: 105px;
     height: 105px;
 
-    max-width: none;
-    max-height: none;
-
-    margin: 0;
-    padding: 0;
-
     object-fit: contain;
     object-position: center;
-
-    transform: none;
 }
 
 
@@ -313,16 +279,13 @@ body {
 /* ========================================
    EXPERIENCE
 
-   一个 Experience 灰色框
-
-   AECOM
-   CEC
+   AECOM + CEC
+   共用一个 Experience
 ======================================== */
 
 .profile-row.experience-row {
     display: grid;
 
-    /* 与 Education / Licenses 完全相同 */
     grid-template-columns:
         var(--label-width)
         var(--logo-width)
@@ -338,9 +301,6 @@ body {
 
 /* ========================================
    EXPERIENCE LIST
-
-   从第 2 列 Logo 开始
-   一直占到第 3 列文字区域
 ======================================== */
 
 .experience-list {
@@ -362,12 +322,6 @@ body {
 
 /* ========================================
    EACH EXPERIENCE ENTRY
-
-   105px Logo
-   +
-   40px Gap
-   +
-   Text
 ======================================== */
 
 .experience-entry {
@@ -425,11 +379,6 @@ body {
     align-self: start;
 }
 
-
-/* ========================================
-   EXPERIENCE TITLE
-======================================== */
-
 .experience-entry .section-content h3 {
     margin: 0 0 6px 0;
     padding: 0;
@@ -439,11 +388,6 @@ body {
 
     white-space: normal;
 }
-
-
-/* ========================================
-   EXPERIENCE DESCRIPTION
-======================================== */
 
 .experience-entry .section-content p {
     margin: 6px 0 0 0;
@@ -652,11 +596,6 @@ body {
     align-self: center;
 }
 
-
-/* ========================================
-   GENERAL ICON
-======================================== */
-
 .tree-icons img {
     display: block;
 
@@ -669,13 +608,7 @@ body {
 
 /* ========================================
    PROJECT 01
-
-   ROAD
-   CCTV
-   CONDUIT
-
-   Gap = 12px
-   Distance to vertical line ≈ 15px
+   ROAD + CCTV + CONDUIT
 ======================================== */
 
 .tree-icons.three-icons {
@@ -701,9 +634,7 @@ body {
 }
 
 
-/* ========================================
-   ROAD
-======================================== */
+/* ROAD */
 
 .three-icons .icon-road {
     position: static;
@@ -724,9 +655,7 @@ body {
 }
 
 
-/* ========================================
-   CCTV
-======================================== */
+/* CCTV */
 
 .three-icons .icon-cctv {
     position: static;
@@ -747,9 +676,7 @@ body {
 }
 
 
-/* ========================================
-   CONDUIT
-======================================== */
+/* CONDUIT */
 
 .three-icons .icon-conduit {
     position: static;
@@ -772,10 +699,6 @@ body {
 
 /* ========================================
    PROJECT 02 — POLE
-
-   95 × 95px
-   与第二条横线中心对齐
-   距离竖线 15px
 ======================================== */
 
 .tree-icons.pole-icon {
@@ -906,9 +829,7 @@ body {
     }
 
 
-    /* ========================================
-       NORMAL PROFILE
-    ======================================== */
+    /* PROFILE */
 
     .profile-row {
         grid-template-columns: 1fr;
@@ -935,9 +856,7 @@ body {
     }
 
 
-    /* ========================================
-       EXPERIENCE — MOBILE
-    ======================================== */
+    /* EXPERIENCE */
 
     .profile-row.experience-row {
         grid-template-columns: 1fr;
@@ -966,9 +885,7 @@ body {
     }
 
 
-    /* ========================================
-       PROJECTS
-    ======================================== */
+    /* PROJECTS */
 
     .projects-grid {
         grid-template-columns: 1fr;
@@ -985,9 +902,7 @@ body {
     }
 
 
-    /* ========================================
-       PROJECT TREE
-    ======================================== */
+    /* PROJECT TREE */
 
     .project-tree {
         --icon-zone: 215px;
@@ -995,18 +910,12 @@ body {
     }
 
 
-    /* ========================================
-       PROJECT ROW
-    ======================================== */
-
     .tree-item {
         min-height: 330px;
     }
 
 
-    /* ========================================
-       PROJECT 01
-    ======================================== */
+    /* PROJECT 01 */
 
     .tree-icons.three-icons {
         width: 196px;
@@ -1028,54 +937,25 @@ body {
     }
 
 
-    /* ROAD */
-
     .three-icons .icon-road {
-        position: static;
-
         width: 95px;
         height: auto;
-
-        margin: 0;
-        padding: 0;
-
-        transform: none;
     }
 
-
-    /* CCTV */
 
     .three-icons .icon-cctv {
-        position: static;
-
         width: 95px;
         height: auto;
-
-        margin: 0;
-        padding: 0;
-
-        transform: none;
     }
 
-
-    /* CONDUIT */
 
     .three-icons .icon-conduit {
-        position: static;
-
         width: auto;
         height: 95px;
-
-        margin: 0;
-        padding: 0;
-
-        transform: none;
     }
 
 
-    /* ========================================
-       PROJECT 02 — POLE
-    ======================================== */
+    /* PROJECT 02 — POLE */
 
     .tree-icons.pole-icon {
         width: 95px;
