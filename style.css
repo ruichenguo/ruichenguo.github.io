@@ -10,8 +10,8 @@
 
     --label-width: 190px;
 
-    /* Logo column */
-    --logo-width: 150px;
+    /* 三个 Profile Logo 统一为 105px */
+    --logo-width: 105px;
 
     --dark: #555555;
     --orange: #ff6600;
@@ -153,11 +153,14 @@ body {
 
 /* ========================================
    PROFILE LOGO CONTAINER
+
+   UTK / NVBPELS / AECOM
+   全部统一为 105 × 105px
 ======================================== */
 
 .section-logo {
-    width: 150px;
-    height: 150px;
+    width: 105px;
+    height: 105px;
 
     margin: 0;
     padding: 0;
@@ -174,17 +177,24 @@ body {
 
 
 /* ========================================
-   GENERAL PROFILE LOGO
+   ALL PROFILE LOGOS
 ======================================== */
 
 .section-logo img {
     display: block;
+
+    width: 105px;
+    height: 105px;
+
+    max-width: none;
 
     margin: 0;
     padding: 0;
 
     object-fit: contain;
     object-position: center top;
+
+    transform: none;
 }
 
 
@@ -193,10 +203,13 @@ body {
 ======================================== */
 
 .section-logo .logo-utk {
-    width: 150px;
-    height: 150px;
+    width: 105px;
+    height: 105px;
 
     max-width: none;
+
+    margin: 0;
+    padding: 0;
 
     object-fit: contain;
     object-position: center top;
@@ -210,10 +223,13 @@ body {
 ======================================== */
 
 .section-logo .logo-nvbpe {
-    width: 150px;
-    height: 150px;
+    width: 105px;
+    height: 105px;
 
     max-width: none;
+
+    margin: 0;
+    padding: 0;
 
     object-fit: contain;
     object-position: center top;
@@ -224,19 +240,11 @@ body {
 
 /* ========================================
    AECOM LOGO
-
-   SVG 已经裁掉多余画布。
-
-   绿色方块实际显示尺寸：
-   95px × 95px
-
-   顶部与 Experience 灰框顶部对齐。
-   水平方向位于 150px Logo 栏正中央。
 ======================================== */
 
 .section-logo .logo-aecom {
-    width: 95px;
-    height: 95px;
+    width: 105px;
+    height: 105px;
 
     max-width: none;
 
@@ -504,6 +512,7 @@ body {
                 │
              CONDUIT
 
+   三个中心线对齐
    Road / CCTV 到竖线约 15px
 ======================================== */
 
@@ -686,10 +695,13 @@ body {
 
     :root {
         --side-padding: 20px;
+        --logo-width: 105px;
     }
 
 
-    /* PROFILE */
+    /* ========================================
+       PROFILE
+    ======================================== */
 
     .profile-row {
         grid-template-columns: 1fr;
@@ -698,25 +710,24 @@ body {
     }
 
     .section-logo {
-        width: 150px;
-        height: 150px;
+        width: 105px;
+        height: 105px;
 
         justify-self: start;
     }
 
+    .section-logo img,
     .section-logo .logo-utk,
-    .section-logo .logo-nvbpe {
-        width: 150px;
-        height: 150px;
-    }
-
+    .section-logo .logo-nvbpe,
     .section-logo .logo-aecom {
-        width: 95px;
-        height: 95px;
+        width: 105px;
+        height: 105px;
     }
 
 
-    /* PROJECTS */
+    /* ========================================
+       PROJECTS
+    ======================================== */
 
     .projects-grid {
         grid-template-columns: 1fr;
@@ -732,7 +743,9 @@ body {
     }
 
 
-    /* PROJECT TREE */
+    /* ========================================
+       PROJECT TREE
+    ======================================== */
 
     .project-tree {
         --icon-zone: 215px;
@@ -740,14 +753,18 @@ body {
     }
 
 
-    /* PROJECT ROW */
+    /* ========================================
+       PROJECT ROW
+    ======================================== */
 
     .tree-item {
         min-height: 330px;
     }
 
 
-    /* THREE ICONS */
+    /* ========================================
+       THREE ICONS
+    ======================================== */
 
     .tree-icons.three-icons {
         width: 196px;
